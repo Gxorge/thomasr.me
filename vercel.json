@@ -29,10 +29,6 @@
             "destination": "https://github.com/itsmeimtom/thomasr.me/graphs/contributors"
         },
         {
-            "source": "/hello-from/(sx|go|ivd|tomr)(\/*)",
-            "destination": "https://imtom.notion.site/b0c59a6cd48d49eca2dec63a245a13b6"
-        },
-        {
             "source": "/ref-codes(\/*)",
             "destination": "https://go.tomr.me/refcodes"
         },
