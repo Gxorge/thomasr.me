@@ -43,6 +43,10 @@
         {
             "source": "/(cv|resume)(\/*)",
             "destination": "https://cv.thomasr.me"
+        },
+        {
+            "source":"/hello-from/misconfigured(\/*)",
+            "destination": "https://tomr.network/misconfig?from=oldmisconfiguredlanding"
         }
     ],
     
