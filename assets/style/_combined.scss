@@ -5,33 +5,32 @@
     @media (prefers-color-scheme: light) { @content; }
 }
 @mixin on-small-screen() {
-    @media screen and (max-width: 80em) { @content; }
+    @media screen and (max-width: 60em) { @content; }
 }
 @mixin on-big-screen() {
-    @media screen and (min-width: 80em) { @content; }
+    @media screen and (min-width: 60em) { @content; }
 }
 
-$fn-headings: 'Merriweather', 'Cambria', 'Cochin', 'Georgia', 'Times', 'Times New Roman', serif;
+$fn-headings: 'Libre Baskerville', 'Merriweather', 'Cambria', 'Cochin', 'Georgia', 'Times', 'Times New Roman', serif;
 $fn-copy: 'Merriweather Sans', 'Verdana', 'Tahoma', 'Helvetica', sans-serif;
 $width: 40; // em
 
-// grey is default, neutral
+// tailwind "stone" is default, neutral
 :root {
-    --accentDark: #292524; // warm grey 800
-    --accentDarkIsh: #44403C; // warm grey 700
-    --accent: #A8A29E; // warm grey 400
-    --accentLightIsh: #F5F5F4;  // warm grey 100 
-    --accentLight: #FAFAF9;  // warm grey 50
+    --accentDark: #1C1917; // 900
+    --accentDarkIsh: #44403C; // 700
+    --accent: #60A5FA; // blue 500
+    --accentLightIsh: #F5F5F4; // 100 
+    --accentLight: #FAFAF9; // warm grey 50
 }
 
-$accentDarkIsh: var(--accentDarkIsh, #57534E);
-$accentDark: var(--accentDark, #292524);
-$accent: var(--accent, #A8A29E);
+$accentDark: var(--accentDark, #1C1917);
+$accentDarkIsh: var(--accentDarkIsh, #44403C);
+$accent: var(--accent, #60A5FA);
+$accentLightIsh: var(--accentLightIsh, #F5F5F4);
 $accentLight: var(--accentLight, #FAFAF9);
-$accentLightIsh: var(--accentLightIsh, #E7E5E4);
 
 @import '_core.scss';
 @import '_header.scss';
 @import '_footer.scss';
-@import '_meta.scss';
-@import '_pages.scss';
+@import '_home.scss';

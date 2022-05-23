@@ -18,42 +18,14 @@ body {
     font-size: 1.1em;
     font-family: $fn-copy;
     font-weight: 400;
-    text-transform: lowercase;
-
-
-    @include on-big-screen {
-        &.wide {
-            main {
-                max-width: calc(100% - 16px);
-            }
-        }
-
-        &.wide-ish {
-            main  {
-                max-width: #{$width * 1.25}em;
-            }
-        }
-    }
 }
 
 
-a#a11y-skip {
-    position: absolute;
-    left: -100%;
-    top: 1em;
-
-    transition: left 0.1s ease-out;
-
-    &:focus {
-        left: 1em;
-    }
+main {
+    max-width: #{$width}em;
+    margin: 0 auto;
+    line-height: 1.5em;
 }
-
-span#after-nav {
-    font-size: 0;
-    opacity: 0;
-}
-
 
 h1,
 h2,
@@ -63,32 +35,23 @@ h4 {
     margin-bottom: 0;
 }
 
-h1 {
-    // 900 for serif, 800 for sans
-    // font-weight: 800;
-    font-weight: 900;
-}
-
-h2 {
-    font-weight: 700;
-}
-
-p {
-    margin-top: 0;
-}
 
 a {
-    color: $accentLightIsh;
-
-    @include in-light-mode {
-        color: $accentDarkIsh;
-    }
+    color: $accent;
 
     &[href] {
-        text-decoration: underline;
+        // text-decoration: underline;
+        text-decoration: none;
+        font-weight: bold;
+
+        i.fa-external-link-alt {
+            font-size: 40%;
+            vertical-align: super;
+        }
 
         &:hover {
-            text-decoration: none;
+            // text-decoration: none;
+            text-decoration: underline;
         }
 
         &:focus {
@@ -103,10 +66,18 @@ a {
     }
 }
 
-a.button {
+// buttons
+a.butt {
     display: inline-block;
-    padding: 8px;
+    padding: 1px 4px;
+    margin: 0 2px;
 
+    @include on-small-screen {
+        margin: 2px 4px;
+        padding: 2px 8px;
+    }
+
+    font-weight: normal;
     text-decoration: none;
 
     color: $accentLightIsh;
@@ -115,42 +86,23 @@ a.button {
     }
 
     border: 2px solid $accent;
-    &.big-border {
-        border-width: 4px;
-    }
     border-radius: 2px;
 
     transition: background-color 0.2s ease-out, color 0.2s ease-out;
 
-    span.moving-icon {
-        display: inline-block;
-        padding-right: 4px;
-        transition: margin-left 0.2s ease-out, padding-right 0.2s ease-out;
-    }
+    &:hover, &:focus {
+        color: $accentDarkIsh;
+        background-color: $accentLight;
+        text-decoration: none;
 
-    &:not(.no-link) {
-        &:hover, &:focus {
-            color: $accentDarkIsh;
-            background-color: $accentLight;
-    
-            @include in-light-mode {
-                color: $accentLightIsh;
-                background-color: $accentDark;
-            }
-    
-            span.moving-icon {
-                padding-right: 0px;
-                margin-left: 4px;
-            }
+        @include in-light-mode {
+            color: $accentLightIsh;
+            background-color: $accentDark;
         }
     }
-}
 
-.button-group {
-    margin-bottom: 1em;
-
-    a.button {
-        margin: 8px 2px;
+    i {
+        color: $accent;
     }
 }
 
@@ -166,73 +118,50 @@ hr {
     max-width: #{$width / 5}em;
 }
 
-main {
-    max-width: #{$width}em;
-    margin: 0 auto;
+
+// helper classes
+
+.smol {
+    font-size: 80%;
+    vertical-align: middle;
 }
 
-article {
-    text-transform: none;
+.smol-quarter {
+    font-size: 25%;
+    vertical-align: middle;
+}
 
-    h1,
-    h2,
-    h3,
-    h4 {
-        &:not(:first-child) {
-            margin-top: 1em;
-        }
-    }
+.baseline {
+    vertical-align: baseline;
+}
 
-    img {
-        max-width: 100%;
-    }
+.embiggen {
+    font-size: 120%;
+}
 
-    iframe {
-        width: 100%;
-    }
+.accent-colour {
+    color: $accent;
+}
 
-    ul li:not(:first-child) {
-        margin-top: 0.25em;
-    }
+// used for inside of headings and stuff
+.weight-400 {
+    font-weight: 400;
+}
 
-    figure.callout {
-        // same as a.button above
+.weight-700 {
+    font-weight: 700;
+}
 
-        display: inline-block;
-        padding: 8px;
-
-        color: $accentLightIsh;
-        @include in-light-mode {
-            color: $accentDarkIsh;
-        }
-    
-        border: 2px solid $accent;
-        &.big-border {
-            border-width: 4px;
-        }
-        border-radius: 2px;
-    }
-
-    figure.image {
-        @include on-big-screen {
-            &.float-right {
-                float: right;
-                margin: 1em 0 1em 1em;
-            }
-
-            &.float-left {
-                float: left;
-                margin: 1em 1em 1em 0em;
-            }
-        }
-
-        figcaption.image-caption {
-            font-style: italic;
-        }
-
-        img {
-            width: 100%;
-        }
-    }
-
+// from tailwind
+// https://tailwindcss.com/docs/screen-readers
+.sr-only {
+	position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
 }

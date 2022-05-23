@@ -17,10 +17,10 @@ gem "jekyll", "~> 4.2.0"
 group :jekyll_plugins do
   gem "jekyll-feed", "~> 0.12"
   # gem "jekyll-redirect-from"
-  gem "jekyll-mentions"
-  gem "jekyll-archives"
+  # gem "jekyll-mentions"
+  # gem "jekyll-archives"
   gem "jekyll-last-modified-at"
-  gem "jekyll-menus"
+  # gem "jekyll-menus"
   gem "jekyll-sitemap"
 end
 

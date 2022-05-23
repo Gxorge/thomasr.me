@@ -1,10 +1,41 @@
-<p>
-    <a href="https://github.com/{{site.github}}/thomasr.me/blob/master/{{ page.path }}" title="{{ page.path }}"><i class="far fa-fw fa-file-code" aria-hidden="true"></i> page source</a>
-    &nbsp;&mdash;&nbsp;
-    <a href="javascript:disableColours()" id="bw-button"><i class="fas fa-fw fa-tint-slash" aria-hidden="true"></i> Disable Colours</a>
-</p>
-<p class="smol">
-    <!-- site year: {{ site.time | date: '%Y' }}, page year: {{ page.last_modified_at | date: '%Y' }} -->
-    <a href="https://github.com/{{site.github}}/thomasr.me/blob/master/LICENSE" title="CC BY-SA License"><i class="fas fa-gavel fa-fw" aria-hidden="true"></i> Some Rights Reserved</a>
-    &nbsp;&nbsp;<a href="/about/this-site/"><i class="fas fa-bookmark fa-fw" aria-hidden="true"></i> Colophon</a>
-</p>
+<footer id="site-footer" class="smol">
+    <p>
+        <a href="javascript:pickColour()" id="col-button" class="js-only"><i class="fas fa-fw fa-palette" aria-hidden="true"></i> New Colour</a>
+        <a href="javascript:disableColours()" id="bw-button" class="js-only"><i class="fas fa-fw fa-tint-slash" aria-hidden="true"></i> Disable Colours</a>
+        <a href="https://github.com/itsmeimtom/thomasr.me/blob/master/{{ page.path }}"><i class="far fa-fw fa-file-code" aria-hidden="true"></i> Page Source</a>
+        <a href="https://github.com/itsmeimtom/thomasr.me/blob/master/LICENSE" title="CC BY-SA License"><i class="fas fa-gavel fa-fw" aria-hidden="true"></i> Some Rights Reserved</a>
+    </p>
+</footer>
+
+<script src="/assets/script/colours.js"></script>
+{% if page.scripts %}
+    {% for script in page.scripts %}
+        <script src="{{ script }}"></script>
+    {% endfor %}
+{% endif %}
+
+{% if page.layout == 'home' %}
+<script>
+    let now = new Date();
+    let h = now.getHours();
+
+    let greeting = "{% if page.lang != 'cy' %}Hello{% else %}Helo{% endif %},";
+
+    if(h >= 5 && h < 12) greeting = "{% if page.lang != 'cy' %}Good morning{% else %}Bore da{% endif %},"; // 5-12 
+
+    if(h >= 12 && h < 18) greeting = "{% if page.lang != 'cy' %}Good afternoon{% else %}Prynhawn da{% endif %},"; // 12-18
+
+    if(h >= 18 && h < 22) greeting = "{% if page.lang != 'cy' %}Good evening{% else %}Noswaith dda{% endif %},"; // 18-22
+
+    if(h >= 22) greeting = "{% if page.lang != 'cy' %}Good night{% else %}Nos da{% endif %},"; // 22-23
+    if(h < 5) greeting = "{% if page.lang != 'cy' %}Good night{% else %}Nos da{% endif %},"; // 0-5
+
+    document.getElementById('js-greeting').innerText = greeting;
+</script>
+
+<script>
+    const email = atob('bWVAVG9tUi5tZQ==');
+    document.getElementById('js-email-text').innerHTML = email;
+    document.getElementById('js-email').href = `mailto:${email}`;
+</script>
+{% endif %}
