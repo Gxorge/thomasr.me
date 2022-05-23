@@ -11,7 +11,7 @@ function setCssAccent(a, c) {
 }
 
 function setColour(c) {
-    document.querySelector('meta[name="theme-color"]').content = `#${c[0]}`;
+    document.querySelector('meta[name="theme-color"]').content = `${c[0]}`;
 
     setCssAccent('', c[0]);
     setCssAccent('Light', c[1]);
