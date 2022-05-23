@@ -3,7 +3,7 @@
 <header id="site-header">
     
     {% if page.layout == 'home' %}
-        <img src="/assets/img/blondtommodrawing.jpg" alt="A toddler-age Thomas laying on a carpet, smiling and clutching a pen" aria-hidden="true">
+        <img src="/assets/img/blondtommodrawing.jpg" alt="A toddler-age Thomas laying on a carpet, smiling and clutching a pen" aria-hidden="true" draggable="false" ondblclick="rainbowomg(parseInt(localStorage.getItem('last-colour')))">
     {% endif %}
 
 

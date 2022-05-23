@@ -53,14 +53,14 @@ function enableColours(noreload) {
     if(!noreload) window.location.reload();
 }
 
-// konami code for colour changing!!
-let pressedKeys = '';
-document.addEventListener('keydown', e => {
-    pressedKeys += e.code;
-    if (pressedKeys == "ArrowUpArrowUpArrowDownArrowDownArrowLeftArrowRightArrowLeftArrowRightKeyBKeyA") {
-        rainbowomg(parseInt(localStorage.getItem('last-colour')));
-    }
-});
+// // konami code for colour changing!!
+// let pressedKeys = '';
+// document.addEventListener('keydown', e => {
+//     pressedKeys += e.code;
+//     if (pressedKeys == "ArrowUpArrowUpArrowDownArrowDownArrowLeftArrowRightArrowLeftArrowRightKeyBKeyA") {
+//         rainbowomg(parseInt(localStorage.getItem('last-colour')));
+//     }
+// });
 
 
 let rainbowCurrentHue = 0;

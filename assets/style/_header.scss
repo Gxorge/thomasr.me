@@ -24,6 +24,10 @@ header#site-header {
         font-size: 3em;
     }
 
+    h1, h2 {
+        z-index: 10;
+    }
+
     a {
         text-decoration: none;
 
@@ -51,7 +55,8 @@ header#site-header {
         }
 
         filter: saturate(1.2) contrast(1.2);
-        z-index: -1;
+        z-index: 1;
+        user-select: none;
     }
 
 }
