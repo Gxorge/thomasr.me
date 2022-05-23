@@ -15,13 +15,4 @@ footer#site-footer {
     }
 
     text-transform: lowercase;
-
-
-    a {
-        text-decoration: none;
-
-        &:hover {
-            text-decoration: underline;
-        }
-    }
 }

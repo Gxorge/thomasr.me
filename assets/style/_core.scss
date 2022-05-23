@@ -50,10 +50,12 @@ a {
     }
 
     &[href] {
-        text-decoration: underline;
+        // text-decoration: underline;
+        text-decoration: none;
 
         &:hover {
-            text-decoration: none;
+            // text-decoration: none;
+            text-decoration: underline;
         }
 
         &:focus {
@@ -68,9 +70,11 @@ a {
     }
 }
 
-a.social {
+// buttons
+a.butt {
     display: inline-block;
-    padding: 2px 8px;
+    padding: 1px 4px;
+    margin: 0 2px;
 
     text-decoration: none;
 
@@ -87,6 +91,7 @@ a.social {
     &:hover, &:focus {
         color: $accentDarkIsh;
         background-color: $accentLight;
+        text-decoration: none;
 
         @include in-light-mode {
             color: $accentLightIsh;
@@ -110,6 +115,15 @@ hr {
 .smol {
     font-size: 80%;
     vertical-align: middle;
+}
+
+.smol-quarter {
+    font-size: 25%;
+    vertical-align: middle;
+}
+
+.baseline {
+    vertical-align: baseline;
 }
 
 .embiggen {

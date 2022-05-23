@@ -1,7 +1,14 @@
 <aside id="colour-bar"></aside>
 
 <header id="site-header">
-    <h1><a href="/" title="Homepage">Thomas Robinson</a></h1>
+    
+    <h1><a href="/" title="Homepage">
+        {% if page.layout != 'home' %}
+            Thomas Robinson
+        {% else %}
+            Hello! I'm Tom! <span class="smol-quarter accent-colour baseline">he/him</span>
+        {% endif %}
+    </a></h1>
 
     {% if page.layout != 'home' %}
     <a href="/">&laquo; Homepage</a>
