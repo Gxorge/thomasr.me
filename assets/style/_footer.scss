@@ -30,8 +30,8 @@ footer#site-footer {
         }
         
         @include on-big-screen {
-            &:not(:last-of-type)::after {
-                content: ' —';
+            &:not(:first-of-type)::before {
+                content: '— ';
             }
         }
     }
