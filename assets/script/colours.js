@@ -13,11 +13,11 @@ function setCssAccent(a, c) {
 function setColour(c) {
     document.querySelector('meta[name="theme-color"]').content = `${c[0]}`;
 
-    setCssAccent('', c[0]);
-    setCssAccent('Light', c[1]);
-    setCssAccent('LightIsh', c[2]);
-    setCssAccent('Dark', c[3]);
-    setCssAccent('DarkIsh', c[4]);
+    setCssAccent('Dark', c[0]);
+    setCssAccent('DarkIsh', c[1]);
+    setCssAccent('', c[2]);
+    setCssAccent('LightIsh', c[3]);
+    setCssAccent('Light', c[4]);
 
 }
 
@@ -38,11 +38,11 @@ function pickColour(hue) {
         return setColour([
             // hue, sat %, lum %
             // todo: perceived luminance correction 
-            hslToHex(baseHue, 50, 50), // base
-            hslToHex(baseHue, 50, 95), // light
-            hslToHex(baseHue, 50, 90), // lightish
-            hslToHex(baseHue, 50, 10), // darkish
-            hslToHex(baseHue, 50, 5) // dark
+            hslToHex(baseHue, 40, 10), // dark
+            hslToHex(baseHue, 50, 20), // darkish
+            hslToHex(baseHue, 40, 50), // base
+            hslToHex(baseHue, 50, 80), // lightish
+            hslToHex(baseHue, 35, 95) // light
         ]);
     }
 }
