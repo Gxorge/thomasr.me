@@ -6,6 +6,7 @@ aside#colour-bar {
     width: 100%;
     height: 16px;
     background-color: $accent;
+    z-index: 999;
 }
 
 header#site-header {
@@ -84,10 +85,10 @@ header#page-header {
         color: $accentDarkIsh;
     }
 
-    background-color: $accentDarkIsh;
-    @include in-light-mode {
-        background-color: $accentLightIsh;
-    }
+    // background-color: $accentDarkIsh;
+    // @include in-light-mode {
+    //     background-color: $accentLightIsh;
+    // }
 
     padding: 1em;
     border-radius: 8px;
