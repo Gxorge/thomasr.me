@@ -10,7 +10,7 @@ footer#site-footer {
     color: $accent;
 
     @include in-light-mode {
-        background-color: $accentLightIsh;
+        // background-color: $accentLightIsh;
         color: $accentDark;
     }
 
