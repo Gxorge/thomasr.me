@@ -38,7 +38,7 @@ function pickColour(hue) {
 function disableColours(noreload) {
     localStorage.setItem('colours', 'off');
     document.getElementById('bw-button').href = 'javascript:enableColours(true)';
-    document.getElementById('bw-button').innerHTML = '<i class="fas fa-fw fa-tint" aria-hidden="true"></i> Enable Colours';
+    document.getElementById('bw-button').innerHTML = '<i aria-hidden="true">🎨</i> Enable Colours';
     document.getElementById('col-button').style.display = 'none';
     if(!noreload) window.location.reload();
 }
@@ -46,7 +46,7 @@ function disableColours(noreload) {
 function enableColours(noreload) {
     localStorage.setItem('colours', 'on');
     document.getElementById('bw-button').href = 'javascript:disableColours()';
-    document.getElementById('bw-button').innerHTML = '<i class="fas fa-fw fa-tint-slash" aria-hidden="true"></i> Disable Colours';
+    document.getElementById('bw-button').innerHTML = '<i aria-hidden="true">🎨</i> Disable Colours';
     document.getElementById('col-button').style.display = 'inline';
     
     if(noreload) pickColour();

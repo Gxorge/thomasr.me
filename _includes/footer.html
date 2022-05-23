@@ -1,9 +1,9 @@
 <footer id="site-footer" class="smol">
     <p>
-        <a href="javascript:pickColour()" id="col-button" class="js-only"><i class="fas fa-fw fa-palette" aria-hidden="true"></i> New Colour</a>
-        <a href="javascript:disableColours()" id="bw-button" class="js-only"><i class="fas fa-fw fa-tint-slash" aria-hidden="true"></i> Disable Colours</a>
-        <a href="https://github.com/itsmeimtom/thomasr.me/blob/master/{{ page.path }}"><i class="far fa-fw fa-file-code" aria-hidden="true"></i> Page Source</a>
-        <a href="https://github.com/itsmeimtom/thomasr.me/blob/master/LICENSE" title="CC BY-SA License"><i class="fas fa-gavel fa-fw" aria-hidden="true"></i> Some Rights Reserved</a>
+        <a href="javascript:pickColour()" id="col-button" class="js-only"><span aria-hidden="true">✨</span> New Colour</a>
+        <a href="javascript:disableColours()" id="bw-button" class="js-only"><span  aria-hidden="true">🎨</span> Disable Colours</a>
+        <!-- <a href="https://github.com/itsmeimtom/thomasr.me/blob/master/{{ page.path }}"><span aria-hidden="true">⌨️</span> Page Source</a> -->
+        <!-- <a href="https://github.com/itsmeimtom/thomasr.me/blob/master/LICENSE" title="CC BY-SA License"><span aria-hidden="true">📜</span> Some Rights Reserved</a> -->
     </p>
 </footer>
 
@@ -11,7 +11,7 @@
 {% if page.scripts %}
     {% for script in page.scripts %}
         <script src="{{ script }}"></script>
-    {% endfor %}
+    {% endfor %}    
 {% endif %}
 
 {% if page.layout == 'home' %}
