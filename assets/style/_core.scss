@@ -1,0 +1,121 @@
+html {
+    visibility: visible;
+}
+
+body {
+    margin: 0;
+    padding: 16px;
+    overflow-x: hidden;
+
+    background-color: $accentDark;
+    color: $accentLight;
+
+    @include in-light-mode {
+        background-color: $accentLight;
+        color: $accentDark;
+    }
+
+    font-size: 1.1em;
+    font-family: $fn-copy;
+    font-weight: 400;
+
+    // only for the homepage
+    &#home {
+        main section {
+            font-size: 110%;
+        }
+    }
+}
+
+
+main {
+    max-width: #{$width}em;
+    margin: 0 auto;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    font-family: $fn-headings;
+    margin-bottom: 0;
+}
+
+
+a {
+    color: $accent;
+
+    @include in-light-mode {
+        color: $accentDarkIsh;
+    }
+
+    &[href] {
+        text-decoration: underline;
+
+        &:hover {
+            text-decoration: none;
+        }
+
+        &:focus {
+            background-color: $accentLight;
+            color: $accentDark;
+
+            @include in-light-mode {
+                background-color: $accentDark;
+                color: $accentLight;
+            }
+        }
+    }
+}
+
+a.social {
+    display: inline-block;
+    padding: 2px 8px;
+
+    text-decoration: none;
+
+    color: $accentLightIsh;
+    @include in-light-mode {
+        color: $accentDarkIsh;
+    }
+
+    border: 2px solid $accent;
+    border-radius: 2px;
+
+    transition: background-color 0.2s ease-out, color 0.2s ease-out;
+
+    &:hover, &:focus {
+        color: $accentDarkIsh;
+        background-color: $accentLight;
+
+        @include in-light-mode {
+            color: $accentLightIsh;
+            background-color: $accentDark;
+        }
+    }
+}
+
+hr {
+    background-color: $accent;
+    // background: linear-gradient(90deg,
+    // rgba(214, 2, 112, 1) 0%,
+    // rgba(155, 79, 150, 1) 50%,
+    // rgba(0, 56, 168, 1) 100%);
+    border: none;
+    border-radius: 1px;
+    padding: 1px 0;
+    max-width: #{$width / 5}em;
+}
+
+.smol {
+    font-size: 80%;
+    vertical-align: middle;
+}
+
+.embiggen {
+    font-size: 120%;
+}
+
+.accent-colour {
+    color: $accent;
+}

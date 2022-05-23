@@ -30,12 +30,12 @@ compress_html:
   ignore:
     envs: ["development"]
 
-# plugins:
+plugins:
   # - jekyll-redirect-from
   # - jekyll-mentions
   # - jekyll-archives
   # - jekyll-last-modified-at
-  # - jekyll-sitemap
+  - jekyll-sitemap
 
 exclude:
   - vercel.json
