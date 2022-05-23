@@ -1,6 +1,11 @@
 footer#site-footer {
     max-width: #{$width}em;
     margin: 2em auto;
+
+    @include on-small-screen {
+        margin-top: 8em;
+    }
+
     padding: 0.5em 0;
     border-radius: 8px;
 
@@ -33,8 +38,9 @@ footer#site-footer {
         @include on-small-screen {
             display: block;
             width: 100%;
-            padding: 4px;
-            margin: 2px 0;
+            padding: 16px;
+            margin: 8px 0;
+            font-size: 1.2em;
         }
         
         @include on-big-screen {

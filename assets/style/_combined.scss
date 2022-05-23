@@ -30,6 +30,8 @@ $accent: var(--accent, #60A5FA);
 $accentLightIsh: var(--accentLightIsh, #F5F5F4);
 $accentLight: var(--accentLight, #FAFAF9);
 
+@import 'fonts/libre-baskerville.css';
+@import 'fonts/merriweather-sans.css';
 @import '_core.scss';
 @import '_header.scss';
 @import '_footer.scss';
