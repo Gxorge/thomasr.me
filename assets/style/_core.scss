@@ -45,10 +45,6 @@ h4 {
 a {
     color: $accent;
 
-    @include in-light-mode {
-        color: $accentDarkIsh;
-    }
-
     &[href] {
         // text-decoration: underline;
         text-decoration: none;

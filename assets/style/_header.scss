@@ -24,3 +24,33 @@ header#site-header {
         }
     }
 }
+
+header#page-header {
+    margin-bottom: 2em;
+
+    background-color: $accentDarkIsh;
+    @include in-light-mode {
+        background-color: $accentLightIsh;
+    }
+
+    padding: 1em;
+    border-radius: 8px;
+
+    color: $accentLightIsh;
+    @include in-light-mode {
+        color: $accentDarkIsh;
+    }
+
+
+    h1, h2 {
+        margin: 0;
+    }
+
+    h1 {
+        font-size: 2.5em;
+    }
+
+    h2 {
+        font-size: 1.5em;
+    }
+}
