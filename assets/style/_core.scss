@@ -18,19 +18,13 @@ body {
     font-size: 1.1em;
     font-family: $fn-copy;
     font-weight: 400;
-
-    // only for the homepage
-    &#home {
-        main section {
-            font-size: 110%;
-        }
-    }
 }
 
 
 main {
     max-width: #{$width}em;
     margin: 0 auto;
+    line-height: 1.5em;
 }
 
 h1,

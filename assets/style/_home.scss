@@ -1,0 +1,22 @@
+body#home {
+    section {
+        font-size: 110%;
+    
+        p {
+            margin: 1.5em 0;
+        }
+    }
+
+    p#projects-intro {
+        margin-bottom: 0;
+    }
+
+    ul#projects-list {
+        margin: 0;
+        list-style-type: '— ';
+    }
+
+    p#projects-outro {
+        margin-top: 0;
+    }
+}
