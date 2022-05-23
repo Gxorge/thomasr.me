@@ -71,7 +71,7 @@ function rainbowomg(startAt) {
     setColour(rainbowCurrentHue);
     rainbowCurrentHue++;
 
-    window.setTimeout(rainbowomg, 1);
+    window.setTimeout(rainbowomg, 20);
 } 
 // Thank you, icl7126
 // https://stackoverflow.com/a/44134328/6325767
