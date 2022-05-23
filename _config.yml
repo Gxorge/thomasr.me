@@ -10,13 +10,6 @@ collections:
     layout: default
     output: true
 
-twitter: itsmeimtom
-github: itsmeimtom
-keybase: itsmeimtom
-lfm: itsmeimtom
-lin: thomasr-me
-flickr: "193606210@N05"
-
 permalink: /:year/:title/
 
 sass:
