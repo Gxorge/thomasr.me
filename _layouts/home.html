@@ -2,7 +2,7 @@
 layout: compress
 ---
 <!DOCTYPE html>
-<html lang="en-GB">
+<html lang="{% if page.lang == 'cy' %}cy-GB{% else %}en-GB{% endif %}">
 {% include html-comment.html %}
 <head>
     {% include head.html %}

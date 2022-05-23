@@ -11,22 +11,26 @@
         {% if page.layout != 'home' %}
             Thomas Robinson
         {% else %}
-            <i class="baskerville-italic"><span class="weight-400" id="js-greeting">Hello,</span></i> <span class="weight-700">I'm&nbsp;Tom!&nbsp;<span class="smol-quarter accent-colour baseline">he/him</span></span>
+            
+
+            <i class="baskerville-italic"><span class="weight-400" id="js-greeting">
+                {% if page.lang != 'cy' %}Hello{% else %}Helo{% endif %},
+            </span></i> <span class="weight-700">{% if page.lang != 'cy' %}I'm&nbsp;{% endif %}Tom{% if page.lang == 'cy' %}&nbsp;Dw i{% endif %}!&nbsp;<span class="smol-quarter accent-colour baseline">he/him</span></span>
         
             <script>
                 let now = new Date();
                 let h = now.getHours();
 
-                let greeting = "Hello,";
+                let greeting = "{% if page.lang != 'cy' %}Hello{% else %}Helo{% endif %},";
 
-                if(h >= 5 && h < 12) greeting = "Good morning,"; // 5-12 
+                if(h >= 5 && h < 12) greeting = "{% if page.lang != 'cy' %}Good morning{% else %}Bore da{% endif %},"; // 5-12 
 
-                if(h >= 12 && h < 18) greeting = "Good afternoon,"; // 12-18
+                if(h >= 12 && h < 18) greeting = "{% if page.lang != 'cy' %}Good afternoon{% else %}Prynhawn da{% endif %},"; // 12-18
 
-                if(h >= 18 && h < 22) greeting = "Good evening,"; // 18-22
+                if(h >= 18 && h < 22) greeting = "{% if page.lang != 'cy' %}Good evening{% else %}Noswaith dda{% endif %},"; // 18-22
 
-                if(h >= 22) greeting = "Good night,"; // 22-23
-                if(h < 5) greeting = "Good night,"; // 0-5
+                if(h >= 22) greeting = "{% if page.lang != 'cy' %}Good night{% else %}Nos da{% endif %},"; // 22-23
+                if(h < 5) greeting = "{% if page.lang != 'cy' %}Good night{% else %}Nos da{% endif %},"; // 0-5
 
                 document.getElementById('js-greeting').innerText = greeting;
             </script>
