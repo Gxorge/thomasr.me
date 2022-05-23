@@ -3,6 +3,7 @@
 <header id="site-header">
     
     {% if page.layout == 'home' %}
+        <!-- image only shows on the homepage -->
         <img src="/assets/img/blondtommodrawing.jpg" alt="A toddler-age Thomas laying on a carpet, smiling and clutching a pen" aria-hidden="true" draggable="false" ondblclick="rainbowomg(parseInt(localStorage.getItem('last-colour')))">
     {% endif %}
 
@@ -10,15 +11,21 @@
     <h1>
         <a href="/" title="Homepage">
         {% if page.layout != 'home' %}
+            <!-- not on a homepage -->
             Thomas Robinson
         {% else %}
+            <!-- we're on a homepage -->
             <i class="baskerville-italic"><span class="weight-400" id="js-greeting">
                 {% if page.lang != 'cy' %}Hello{% else %}Helo{% endif %},
             </span></i> <span class="weight-700">{% if page.lang != 'cy' %}I'm&nbsp;{% endif %}Tom{% if page.lang == 'cy' %}&nbsp;Dw&nbsp;i{% endif %}!</span></span><!--
-    -->{% endif %}<!-- comments here to ensure no whitespace after the quote
- --></a>
-    <span class="smol-quarter accent-colour baseline">
-        {% if page.lang != 'cy' %}he/him{% else %}e/o{% endif %}
+     -->{% endif %}<!-- comments here to ensure no whitespace after the quote
+     --></a>
+        {% if page.layout == 'home' %}
+        <!-- pronouns only show on the homepages -->
+        <span class="smol-quarter accent-colour baseline">
+            {% if page.lang != 'cy' %}he/him{% else %}e/o{% endif %}
+        </span>
+        {% endif %}
     </h1>
 </header>
 
