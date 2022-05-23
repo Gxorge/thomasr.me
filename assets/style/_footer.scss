@@ -6,8 +6,8 @@ footer#site-footer {
 
     text-align: center;
 
-    background-color: $accentDarkIsh;
-    color: $accentLight;
+    // background-color: $accentDarkIsh;
+    color: $accent;
 
     @include in-light-mode {
         background-color: $accentLightIsh;
