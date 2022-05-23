@@ -149,6 +149,21 @@ hr {
     color: $accent;
 }
 
+// used for inside of headings
+i.baskerville-italic {
+    font-style: italic;
+    font-family: 'Libre Baskerville', $fn-headings;
+    margin-bottom: 0.2em;
+}
+
+.weight-400 {
+    font-weight: 400;
+}
+
+.weight-700 {
+    font-weight: 700;
+}
+
 // from tailwind
 // https://tailwindcss.com/docs/screen-readers
 .sr-only {
