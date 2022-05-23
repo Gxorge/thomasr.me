@@ -16,7 +16,7 @@ menus:
 
 Hello! My name is Thomas<sup>he/him</sup>, but it's easier to write Tom. I'm an IT student from the middle of the UK. This is my (superfluous) home on the internet!
 
-I'm particularly interested in systems administration and network architecture and how networks&mdash;from as small as one's home to the entire internet&mdash;are built. I maintan a [homelab](https://wiki.TomR.me/lab) where I can play with various bits and pieces (it also hosts many applications & services!).
+I'm interested in computer hardware and software, particularly networking and systems administration.
 
 Tangentially, I sometimes make [web toys &amp; sites](/projects) and  [take far too many pictures](/photog).
 
