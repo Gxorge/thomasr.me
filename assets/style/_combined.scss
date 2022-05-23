@@ -5,10 +5,10 @@
     @media (prefers-color-scheme: light) { @content; }
 }
 @mixin on-small-screen() {
-    @media screen and (max-width: 80em) { @content; }
+    @media screen and (max-width: 60em) { @content; }
 }
 @mixin on-big-screen() {
-    @media screen and (min-width: 80em) { @content; }
+    @media screen and (min-width: 60em) { @content; }
 }
 
 $fn-headings: 'Merriweather', 'Cambria', 'Cochin', 'Georgia', 'Times', 'Times New Roman', serif;
