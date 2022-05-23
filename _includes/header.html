@@ -14,28 +14,21 @@
             <i class="baskerville-italic"><span class="weight-400" id="js-greeting">Hello,</span></i> <span class="weight-700">I'm&nbsp;Tom!&nbsp;<span class="smol-quarter accent-colour baseline">he/him</span></span>
         
             <script>
-                // let now = new Date();
-                // let h = now.getHours();
+                let now = new Date();
+                let h = now.getHours();
 
-                // let h = 0;
                 let greeting = "Hello,";
 
-                for(let h=0;h<=23;h++) {
+                if(h >= 5 && h < 12) greeting = "Good morning,"; // 5-12 
 
-                    if(h >= 5 && h < 12) greeting = "Good morning,"; // 5-12 
+                if(h >= 12 && h < 18) greeting = "Good afternoon,"; // 12-18
 
-                    if(h >= 12 && h < 18) greeting = "Good afternoon,"; // 12-18
+                if(h >= 18 && h < 22) greeting = "Good evening,"; // 18-22
 
-                    if(h >= 18 && h < 22) greeting = "Good evening,"; // 18-22
+                if(h >= 22) greeting = "Good night,"; // 22-23
+                if(h < 5) greeting = "Good night,"; // 0-5
 
-                    if(h >= 22) greeting = "Good night,"; // 22-23
-                    if(h < 5) greeting = "Good night,"; // 0-5
-
-                    console.log(h, greeting);
-                    // document.getElementById('js-greeting').innerText = greeting;
-                }
-                
-
+                document.getElementById('js-greeting').innerText = greeting;
             </script>
         {% endif %}
     </a></h1>
