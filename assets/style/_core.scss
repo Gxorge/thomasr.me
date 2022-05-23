@@ -124,6 +124,9 @@ hr {
     max-width: #{$width / 5}em;
 }
 
+
+// helper classes
+
 .smol {
     font-size: 80%;
     vertical-align: middle;
@@ -144,4 +147,18 @@ hr {
 
 .accent-colour {
     color: $accent;
+}
+
+// from tailwind
+// https://tailwindcss.com/docs/screen-readers
+.sr-only {
+	position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
 }
