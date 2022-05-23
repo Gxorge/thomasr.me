@@ -15,7 +15,7 @@
 
             <i class="baskerville-italic"><span class="weight-400" id="js-greeting">
                 {% if page.lang != 'cy' %}Hello{% else %}Helo{% endif %},
-            </span></i> <span class="weight-700">{% if page.lang != 'cy' %}I'm&nbsp;{% endif %}Tom{% if page.lang == 'cy' %}&nbsp;Dw&nbsp;i{% endif %}!&nbsp;<span class="smol-quarter accent-colour baseline">he/him</span></span>
+            </span></i> <span class="weight-700">{% if page.lang != 'cy' %}I'm&nbsp;{% endif %}Tom{% if page.lang == 'cy' %}&nbsp;Dw&nbsp;i{% endif %}!&nbsp;<span class="smol-quarter accent-colour baseline">{% if page.lang != 'cy' %}he/him{% else %}e/o{% endif %}</span></span>
         
             <script>
                 let now = new Date();
