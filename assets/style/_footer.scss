@@ -25,6 +25,14 @@ footer#site-footer {
         @include on-small-screen {
             display: block;
             width: 100%;
+            padding: 4px;
+            margin: 2px 0;
+        }
+        
+        @include on-big-screen {
+            &:not(:last-of-type)::after {
+                content: ' —';
+            }
         }
     }
 }

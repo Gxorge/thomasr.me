@@ -1,9 +1,7 @@
 if(localStorage.getItem('colours') !== 'off') {
     pickColour();
-    document.body.classList.add('colours-enabled');
 } else {
-    document.getElementById('bw-button').href = 'javascript:enableColours()';
-    document.getElementById('bw-button').innerHTML = '<i class="fas fa-fw fa-tint" aria-hidden="true"></i> Enable Colours';
+    disableColours(true);
 }
 
 function setCssAccent(a, c) {
@@ -18,7 +16,6 @@ function setColour(c) {
     setCssAccent('', c[2]);
     setCssAccent('LightIsh', c[3]);
     setCssAccent('Light', c[4]);
-
 }
 
 function pickColour(hue) {
@@ -47,18 +44,22 @@ function pickColour(hue) {
     }
 }
 
-function disableColours() {
+function disableColours(noreload) {
     localStorage.setItem('colours', 'off');
-    document.getElementById('bw-button').href = 'javascript:enableColours()';
+    document.getElementById('bw-button').href = 'javascript:enableColours(true)';
     document.getElementById('bw-button').innerHTML = '<i class="fas fa-fw fa-tint" aria-hidden="true"></i> Enable Colours';
-    window.location.reload();
+    document.getElementById('col-button').style.display = 'none';
+    if(!noreload) window.location.reload();
 }
 
-function enableColours() {
+function enableColours(noreload) {
     localStorage.setItem('colours', 'on');
     document.getElementById('bw-button').href = 'javascript:disableColours()';
     document.getElementById('bw-button').innerHTML = '<i class="fas fa-fw fa-tint-slash" aria-hidden="true"></i> Disable Colours';
-    window.location.reload();
+    document.getElementById('col-button').style.display = 'inline';
+    
+    if(noreload) pickColour();
+    if(!noreload) window.location.reload();
 }
 
 // konami code for colour changing!!
