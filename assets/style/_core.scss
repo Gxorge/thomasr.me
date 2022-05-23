@@ -48,6 +48,7 @@ a {
     &[href] {
         // text-decoration: underline;
         text-decoration: none;
+        font-weight: bold;
 
         &:hover {
             // text-decoration: none;
@@ -72,6 +73,7 @@ a.butt {
     padding: 1px 4px;
     margin: 0 2px;
 
+    font-weight: normal;
     text-decoration: none;
 
     color: $accentLightIsh;
@@ -93,6 +95,10 @@ a.butt {
             color: $accentLightIsh;
             background-color: $accentDark;
         }
+    }
+
+    i {
+        color: $accent;
     }
 }
 

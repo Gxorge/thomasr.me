@@ -12,6 +12,10 @@ header#site-header {
     max-width: #{$width}em;
     margin: 2em auto;
 
+    border-bottom: 8px solid $accent;
+    
+    text-transform: lowercase;
+
     h1 {
         font-size: 3em;
     }
@@ -23,10 +27,16 @@ header#site-header {
             text-decoration: underline;
         }
     }
+
 }
 
 header#page-header {
     margin-bottom: 2em;
+
+    color: $accentLightIsh;
+    @include in-light-mode {
+        color: $accentDarkIsh;
+    }
 
     background-color: $accentDarkIsh;
     @include in-light-mode {
@@ -36,11 +46,7 @@ header#page-header {
     padding: 1em;
     border-radius: 8px;
 
-    color: $accentLightIsh;
-    @include in-light-mode {
-        color: $accentDarkIsh;
-    }
-
+    text-transform: lowercase;
 
     h1, h2 {
         margin: 0;

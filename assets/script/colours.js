@@ -1,47 +1,49 @@
-const colours = [
-     // tailwind colours       // 400   // 50    // 100   // 700or800  // 800 or 900
-    {"name": "red", "colours": ["F87171","FEF2F2","FEE2E2","991B1B","7F1D1D"]},
-    {"name": "orange", "colours": ["FB923C","FFF7ED","FFEDD5","9A3412","7C2D12"]},
-    {"name": "yellow", "colours": ["FACC15","FEFCE8","FEF9C3","854D0E","713F12"]},
-    {"name": "emerald", "colours": ["34D399","ECFDF5","D1FAE5","065F46","064E3B"]},
-    {"name": "cyan", "colours": ["22D3EE","ECFEFF","CFFAFE","155E75","164E63"]},
-    {"name": "blue", "colours": ["60A5FA","EFF6FF","DBEAFE","1E40AF","1E3A8A"]},
-    {"name": "indigo", "colours": ["818CF8","EEF2FF","E0E7FF","3730A3","312E81"]},
-    {"name": "purple", "colours": ["C084FC","FAF5FF","F3E8FF","6B21A8","581C87"]},
-    {"name": "fuchsia", "colours": ["E879F9","FDF4FF","FAE8FF","86198F","701A75"]},
-    {"name": "rose", "colours": ["FB7185","FFF1F2","FFE4E6","9F1239","881337"]} 
-];
-
 if(localStorage.getItem('colours') !== 'off') {
     pickColour();
+    document.body.classList.add('colours-enabled');
 } else {
     document.getElementById('bw-button').href = 'javascript:enableColours()';
     document.getElementById('bw-button').innerHTML = '<i class="fas fa-fw fa-tint" aria-hidden="true"></i> Enable Colours';
 }
 
 function setCssAccent(a, c) {
-    document.querySelector(':root').style.setProperty(`--accent${a}`, `#${c}`);
+    document.querySelector(':root').style.setProperty(`--accent${a}`, `${c}`);
 }
 
 function setColour(c) {
-    document.querySelector('meta[name="theme-color"]').content = `#${c.colours[0]}`;
+    document.querySelector('meta[name="theme-color"]').content = `#${c[0]}`;
 
-    setCssAccent('', c.colours[0]);
-    setCssAccent('Light', c.colours[1]);
-    setCssAccent('LightIsh', c.colours[2]);
-    setCssAccent('DarkIsh', c.colours[3]);
-    setCssAccent('Dark', c.colours[4]);
+    setCssAccent('', c[0]);
+    setCssAccent('Light', c[1]);
+    setCssAccent('LightIsh', c[2]);
+    setCssAccent('Dark', c[3]);
+    setCssAccent('DarkIsh', c[4]);
 
-    localStorage.setItem('last-colour', c.name);
 }
 
-function pickColour() {
-    let randColour = colours[Math.floor(Math.random()*colours.length)];
+function pickColour(hue) {
+    let baseHue = hue ? hue : Math.floor(Math.random() * (359 - 1 + 1) + 1);
 
-    if(localStorage.getItem('last-colour') == randColour.name) {
-        pickColour();
-    } else {
-        return setColour(randColour);
+    if(
+        // ensure new colour is more than 25deg from previous
+        (Math.abs(parseInt(localStorage.getItem('last-colour')) - baseHue) <= 25)
+        ||
+        // avoid putrid yellows
+        (baseHue > 45 && baseHue < 120)
+    ) {
+        return pickColour();    
+    } else {        
+        localStorage.setItem('last-colour', baseHue);
+
+        return setColour([
+            // hue, sat %, lum %
+            // todo: perceived luminance correction 
+            hslToHex(baseHue, 50, 50), // base
+            hslToHex(baseHue, 50, 95), // light
+            hslToHex(baseHue, 50, 90), // lightish
+            hslToHex(baseHue, 50, 10), // darkish
+            hslToHex(baseHue, 50, 5) // dark
+        ]);
     }
 }
 
@@ -58,3 +60,25 @@ function enableColours() {
     document.getElementById('bw-button').innerHTML = '<i class="fas fa-fw fa-tint-slash" aria-hidden="true"></i> Disable Colours';
     window.location.reload();
 }
+
+// konami code for colour changing!!
+let pressedKeys = '';
+document.addEventListener('keydown', e => {
+  pressedKeys += e.code;
+  if (pressedKeys == "ArrowUpArrowUpArrowDownArrowDownArrowLeftArrowRightArrowLeftArrowRightKeyBKeyA") {
+      window.setInterval(pickColour, 1000);
+  }
+});
+
+// Thank you, icl7126
+// https://stackoverflow.com/a/44134328/6325767
+function hslToHex(h, s, l) {
+    l /= 100;
+    const a = s * Math.min(l, 1 - l) / 100;
+    const f = n => {
+      const k = (n + h / 30) % 12;
+      const color = l - a * Math.max(Math.min(k - 3, 9 - k, 1), -1);
+      return Math.round(255 * color).toString(16).padStart(2, '0');   // convert to Hex and prefix "0" if needed
+    };
+    return `#${f(0)}${f(8)}${f(4)}`;
+  }
