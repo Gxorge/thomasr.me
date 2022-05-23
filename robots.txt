@@ -4,11 +4,13 @@
 # this isn't a production site, please go away xoxo
 User-Agent: *
 Disallow: /
+
 {% else %}
 # Beep Boop!
 
 User-Agent: *
-Sitemap: /sitemap.xml
+Sitemap: {{ site.url }}/sitemap.xml
+Sitemap: https://github-sitemap.thomasr.me/sitemap.xml
 
 {% for page in site.pages %}{% if page.hidden %}
 Disallow: {{ page.url }}{% endif %}{% endfor %} # added automatically
