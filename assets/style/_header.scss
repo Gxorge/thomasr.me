@@ -22,6 +22,12 @@ header#site-header {
 
     h1 {
         font-size: 3em;
+
+        i.baskerville-italic {
+            font-style: italic;
+            font-family: 'Libre Baskerville', $fn-headings;
+            margin-bottom: 0.2em;
+        }
     }
 
     h1, h2 {
@@ -60,6 +66,13 @@ header#site-header {
         user-select: none;
     }
 
+}
+
+body#home {
+    header#site-header {
+        margin-bottom: 1em;
+        border-bottom: none;
+    }
 }
 
 header#page-header {

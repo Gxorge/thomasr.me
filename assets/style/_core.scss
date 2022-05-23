@@ -149,13 +149,7 @@ hr {
     color: $accent;
 }
 
-// used for inside of headings
-i.baskerville-italic {
-    font-style: italic;
-    font-family: 'Libre Baskerville', $fn-headings;
-    margin-bottom: 0.2em;
-}
-
+// used for inside of headings and stuff
 .weight-400 {
     font-weight: 400;
 }
