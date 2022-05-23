@@ -50,6 +50,11 @@ a {
         text-decoration: none;
         font-weight: bold;
 
+        i.fa-external-link-alt {
+            font-size: 40%;
+            vertical-align: super;
+        }
+
         &:hover {
             // text-decoration: none;
             text-decoration: underline;
