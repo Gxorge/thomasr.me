@@ -1,204 +1,110 @@
+aside#colour-bar {
+    display: block;
+    position: fixed;
+    top: -4px;
+    left: 0;
+    width: 100%;
+    height: 16px;
+    background-color: $accent;
+    z-index: 999;
+}
+
 header#site-header {
-    // max-width: #{$width}em;
-    // margin: 0 auto;
+    max-width: #{$width}em;
+    margin: 2em auto;
 
-    // padding-left: 8px;
-    // border-left: 4px solid $accent;
+    @include on-small-screen {
+        margin-top: -0.5em;
+    }
 
-    max-width: calc(#{$width/1.25}em - 2em);
-    margin: 0 auto;
-    margin-bottom: 2em;
-    padding: 1em;
-    border-radius: 0 0 8px 8px;
+    border-bottom: 8px solid $accent;
+    
+    text-transform: lowercase;
 
-    // @include on-small-screen {
-        max-width: calc(#{$width}em - 2em);
+    h1 {
+        font-size: 3em;
 
-        background-color: $accentDarkIsh;
-        @include in-light-mode {
-            background-color: $accentLightIsh;
+        i.baskerville-italic {
+            font-style: italic;
+            font-family: 'Libre Baskerville', $fn-headings;
+            margin-bottom: 0.2em;
         }
-    // }
+    }
 
-    a#home-link {
-        color: inherit;
+    h1, h2 {
+        position: relative; // required for z-index to work
+        z-index: 10;
+    }
+
+    a {
         text-decoration: none;
 
         &:hover {
-            h1 {
-                background-color: $accentDark;
-                
-                @include on-big-screen {
-                    background-color: $accentDarkIsh;
-                }
-
-                &:before {
-                    border-color: $accentLight;
-                    @include in-light-mode {
-                        border-color: $accentDark;
-                    }
-                    // background-image: url('/assets/img/blondtommo128.jpg');
-                }
-            }
+            text-decoration: underline;
         }
     }
 
-    h1 {
-        display: inline;
-        margin: 0;
-        font-family: $fn-headings;
-        font-size: 1.75em;
-        font-weight: 900;
-        color: $accent;
-
+    img {
+        position: relative;
+        width: 100%;
+        
+        margin-bottom: -8em;
+        margin-top: 1em;
         @include on-small-screen {
-            font-size: 2em;
+            margin-top: 0;
         }
 
-        img {
-            height: 1em;
-            position: relative;
-            top: 2px;
+        border-radius: 8px 8px 0 0;
+        mask-image: linear-gradient(to bottom, #000 0%, transparent 80%);
+        -webkit-mask-image: linear-gradient(to bottom, #000 0%, transparent 80%);
+
+        @include on-big-screen {
+            transform: scale(1.1);
         }
 
-        &::before {
-            display: block;
-            height: 2em;
-            width: 2em;
-            content: '';
-
-            margin: 0;
-            padding: 0;
-            @include on-big-screen {
-                float: left;
-                margin-right: 0.5em;
-            }
-    
-            @include on-small-screen {
-                height: 2em;
-                margin-bottom: 0.5em;
-            }
-            
-            background-image: url('/assets/img/blondtommo128.jpg');
-            // background-image: url('/assets/img/tophat128.png');
-            background-repeat: no-repeat;
-            background-position: center bottom;
-            background-size: contain;
-
-            border: 1px solid $accent;
-            border-radius: 12px;
-
-            filter: brightness(0.8);
-        }
+        filter: saturate(1.2) contrast(1.2);
+        z-index: 1;
+        user-select: none;
     }
 
-    nav {
-        display: flex;
-        align-items: flex-start;
-        justify-content: space-between;
+}
 
-        ul {
-            display: flex;
-            flex-direction: row;
-            justify-content: none;
-            align-items: center;
-            list-style: none;
-            margin: 0;
-            padding: 0;
-    
-            li {
-                display: inline-block;
-                margin: 0 2px;
-                padding: 0;
-    
-                @include on-big-screen {
-                    &:not(:first-of-type) {
-                        margin-left: 8px;
-                    }
-                }
-    
-                @include on-small-screen {
-                    margin: 4px 0;
-                }
-    
-                a {
-                    display: inline-block;
-                    text-decoration: none;
-                    color: $accentLightIsh;
-                    @include in-light-mode {
-                        color: $accentDarkIsh;
-                    }
-
-                    &[href], &[href]:hover {
-                        text-decoration: none;
-                    }
-                    
-                    @include on-big-screen {
-                        padding-bottom: 2px;
-                        
-                        // deliberately the same colour as the background 
-                        border-bottom: 2px solid $accentDarkIsh;
-
-                        @include in-light-mode {
-                            border-bottom: 2px solid $accentLightIsh;
-                        }
-                    }
-
-                    @include on-small-screen {
-                        padding: 4px;
-                    }
-    
-                    i.fa-external-link-alt {
-                        font-size: 0.4em;
-                        vertical-align: super;
-                    }
-            
-                    &:hover,
-                    &.current-page {
-                        color: $accent;
-                        @include on-big-screen {
-                            border-bottom: 2px solid $accent;
-                        }
-                        @include on-small-screen {
-                            &:not(.social) {
-                                padding-left: 8px;
-                                border-left: 4px solid $accent;
-                            }
-                            &.social {
-                                padding-right: 8px;
-                                border-right: 4px solid $accent;
-                            }
-                        }
-                    }
-                }
-            }
-    
-            @include on-small-screen {
-                flex-direction: column;
-    
-                li {
-                    display: block;
-                    width: 100%;
-                }
-            }
-        }
+body#home {
+    header#site-header {
+        margin-bottom: 1em;
+        border-bottom: none;
     }
 }
 
-aside#bi-bar {
-    // visibility: hidden;
-    display: block;
-    max-width: #{$width}em;
-    margin: 0 auto;
-    height: 4px;
-    background-color: $accent;
-    // background-color: #d60270;
-    // background: linear-gradient(90deg, #d60270 0%, #9b4f96 50%, #0038a8 100%);
-    border-radius: 0;
+header#page-header {
+    margin-bottom: 2em;
+    line-height: 2.8em;
 
-    &.bent {
-        visibility: visible;
-        background: linear-gradient(90deg, #d60270 0%, #9b4f96 50%, #0038a8 100%);
-        // background: linear-gradient(to right,orange,yellow,green,cyan,blue,violet);
+    color: $accentLightIsh;
+    @include in-light-mode {
+        color: $accentDarkIsh;
+    }
+
+    // background-color: $accentDarkIsh;
+    // @include in-light-mode {
+    //     background-color: $accentLightIsh;
+    // }
+
+    padding: 1em;
+    border-radius: 8px;
+
+    text-transform: lowercase;
+    text-align: center;
+
+    h1, h2 {
+        margin: 0;
+    }
+
+    h1 {
+        font-size: 2.5em;
+    }
+
+    h2 {
+        font-size: 1.5em;
     }
 }

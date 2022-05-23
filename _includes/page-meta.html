@@ -1,7 +1,0 @@
-<header id="page-meta">
-    {% if page.image %}
-        <img src="{{ page.image }}" alt="{% if page.imagealt %}{{ page.imagealt }}{% else %}{{ page.image }}{% endif %}" {% if page.imagealt %}title="{{ page.imagealt }}"{% endif %} aria-hidden="true"></img>
-    {% endif %}
-    <h1 id="page-title">{{ page.title }}</h1>
-    <h2 id="page-description">{{ page.description }}</h2>
-</header>

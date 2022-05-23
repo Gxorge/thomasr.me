@@ -1,24 +1,3 @@
-{% if page.image %}
-    {% if page.layout == 'post' %}
-        <!-- blog post w image -->
-        {% include legacy/image_folder.html %}
-        {% assign metaImageURL = /assets/img/posts/{{ post_img_folder }}/{{ page.image }} %}
-    {% else %}
-        <!-- page w image -->
-        <!-- {{ page.image }} -->
-        {% capture metaImageURL %}{{ page.image }}{% endcapture %}
-        {% endif %}
-{% else %}
-    <!-- page w/o image, using fallback -->
-    {% assign metaImageURL = "/assets/img/blondtommo.jpg" %}
-{% endif %}
-
-{% if page.author %}
-    {% assign metaAuthor = {{ page.author }} %}
-{% else %}
-    {% assign metaAuthor = "Tom" %}
-{% endif %}
-
 <!-- page meta -->
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -29,32 +8,43 @@
 <!-- seo -->
 <meta name="title" content="{{ page.title }} &mdash; {{ site.title }}">
 <meta name="description" content="{{ page.description }}">
-<meta name="author" content="{{ metaAuthor }}">
+<meta name="author" content="{{ site.title }}">
 <!-- open graph -->
 <meta property="og:title" content="{{ page.title }} &mdash; {{ site.title }}">
 <meta property="og:site_name" content="{{ site.title }}">
 <meta property="og:description" content="{{ page.description }}">
 <meta property="og:url" content="{{ site.url }}{{ page.url }}">
 <meta property="og:type" content="website">
-<meta property="og:author" content="{{ metaAuthor }}">
-<meta property="og:image" content="{{ metaImageURL }}">
+<meta property="og:author" content="{{ site.title }}">
+<meta property="og:image" content="/assets/img/blondtommodrawing.jpg">
 <!-- twitter cards -->
 <meta name="twitter:title" content="{{ page.title }} &mdash; {{ site.title }}">
 <meta name="twitter:description" content="{{ page.description }}">
 <meta name="twitter:creator" content="@itsmeimtom">
-<meta name="twitter:author" content="{{ metaAuthor }}">
-<meta name="twitter:image" content="{{ metaImageURL }}">
+<meta name="twitter:author" content="{{ site.title }}">
+<meta name="twitter:image" content="/assets/img/blondtommodrawing.jpg">
 
 <!-- theme colour for accenting -->
-<meta name="theme-color" content="#bfab8f">
+<meta name="theme-color" content="#60A5FA">
 
-<title>{% if page.notitle != true %}{{ page.title }} &mdash; {% endif %}{{ site.title }}</title>
+<!-- page title -->
+<title>{% if page.layout != 'home' %}{{ page.title }} &mdash; {% endif %}{{ site.title }}</title>
 
-<link rel="shortcut icon" href="/assets/img/tophat128.png" type="image/png">
+<!-- favicon -->
+<link rel="shortcut icon" href="/assets/img/twemoji-peace-square.png" type="image/png">
 
+<!-- google fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Merriweather+Sans:wght@400;700&display=swap" rel="stylesheet"> 
+{% if page.layout == 'home' %}
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital@1&display=swap&text=HheloGgdmrniBbaftPpywvNs%20," rel="stylesheet"> 
+{% endif %}
 
+<!-- main css -->
+<link rel="stylesheet" href="/assets/style/main.css">
+
+<!-- font awesome icons -->
 <link rel="preload" href="https://ka-f.fontawesome.com/releases/v6.0.0-beta1/css/free.min.css?token=a4db9daed8" as="style" onload="this.onload=null;this.rel='stylesheet'">
 <link rel="preload" href="https://ka-f.fontawesome.com/releases/v6.0.0-beta1/css/free-v4-font-face.min.css?token=a4db9daed8" as="style" onload="this.onload=null;this.rel='stylesheet'">
 <noscript>
@@ -62,13 +52,9 @@
     <link rel="stylesheet" href="https://ka-f.fontawesome.com/releases/v6.0.0-beta1/css/free-v4-font-face.min.css?token=a4db9daed8">
 </noscript>
 
-
-<link href="https://fonts.googleapis.com/css2?family=Merriweather+Sans&family=Merriweather:wght@700;900&display=swap" rel="stylesheet"> 
-
-<link rel="stylesheet" href="/assets/style/main.css">
-
-{% if page.head %}
-{% for h in page.head %}
-   {{ h }}
-{% endfor %}
-{% endif %}
+<noscript>
+    <!-- style is only allowed as child of noscript when in <head> -->
+    <style>
+        .js-only { display: none; }
+    </style>
+</noscript>

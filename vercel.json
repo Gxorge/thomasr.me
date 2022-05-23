@@ -5,20 +5,12 @@
     "cleanUrls": true,
 
     "redirects": [{
-            "source": "/(faq|contact|who|now)(\/*)",
-            "destination": "/about"
+            "source": "/(faq|contact|who|now|about|projects)(\/*)",
+            "destination": "/"
         },
         {
-            "source": "/(flickr|photography|photos)(\/*)",
-            "destination": "/photog"
-        },
-        {
-            "source": "/projects/(flickr|photography|photos)(\/*)",
-            "destination": "/photog"
-        },
-        {
-            "source": "/projects/(lab|homelab|wiki)(\/*)",
-            "destination": "https://wiki.tomr.me"
+            "source": "/(flickr|photography|photos|photog)(\/*)",
+            "destination": "https://www.flickr.com/photos/193606210@N05"
         },
         {
             "source": "/flickr/map/stations(\/*)",

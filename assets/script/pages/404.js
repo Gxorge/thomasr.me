@@ -11,7 +11,6 @@ if (!location.pathname !== '/404.html') {
                 document.title = 'This page has moved!';
                 document.getElementById('page-title').innerHTML = `This page has moved!`;
                 document.getElementById('page-description').innerHTML = `You should be redirected shortly.`;
-                document.getElementById('js-project-url').innerHTML = ` or <a href="${newURL}">here</a>`;
                 window.location = newURL;
             }
         }
