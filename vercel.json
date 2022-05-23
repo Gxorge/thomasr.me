@@ -53,6 +53,10 @@
                 {
                     "key": "X-Powered-By",
                     "value": "hugs"
+                },
+                {
+                    "key": "Content-Security-Policy",
+                    "value": "frame-ancestors 'self';block-all-mixed-content;default-src 'self';script-src 'self' 'report-sample' 'unsafe-inline' https://kit.fontawesome.com https://use.fontawesome.com;style-src 'self' 'report-sample' 'unsafe-inline' *.fontawesome.com fonts.googleapis.com;object-src 'none';frame-src 'self';child-src 'self';img-src 'self' fonts.gstatic.com;font-src 'self' data: *.fontawesome.com fonts.googleapis.com fonts.gstatic.com;connect-src 'self' *.fontawesome.com fonts.gstatic.com fonts.googleapis.com;manifest-src 'self';base-uri 'self';form-action 'self';media-src 'self';prefetch-src 'self';worker-src 'self';" 
                 }
             ]
         },
@@ -65,6 +69,10 @@
                 {
                     "key": "X-Powered-By",
                     "value": "hugs"
+                },
+                {
+                    "key": "Content-Security-Policy",
+                    "value": "frame-ancestors 'self';block-all-mixed-content;default-src 'self';script-src 'self' 'report-sample' 'unsafe-inline' https://kit.fontawesome.com https://use.fontawesome.com;style-src 'self' 'report-sample' 'unsafe-inline' *.fontawesome.com fonts.googleapis.com;object-src 'none';frame-src 'self';child-src 'self';img-src 'self' fonts.gstatic.com;font-src 'self' data: *.fontawesome.com fonts.googleapis.com fonts.gstatic.com;connect-src 'self' *.fontawesome.com fonts.gstatic.com fonts.googleapis.com;manifest-src 'self';base-uri 'self';form-action 'self';media-src 'self';prefetch-src 'self';worker-src 'self';" 
                 }
             ]
         }
