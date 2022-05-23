@@ -1,13 +1,6 @@
 <aside id="colour-bar" aria-hidden="true"></aside>
 
 <header id="site-header">
-    
-    {% if page.layout == 'home' %}
-        <!-- image only shows on the homepage -->
-        <img src="/assets/img/blondtommodrawing.jpg" alt="A toddler-age Thomas laying on a carpet, smiling and clutching a pen" aria-hidden="true" draggable="false" ondblclick="rainbowomg(parseInt(localStorage.getItem('last-colour')))">
-    {% endif %}
-
-
     <h1>
         <a href="/" title="Homepage">
         {% if page.layout != 'home' %}
@@ -22,10 +15,9 @@
      --></a>
         {% if page.layout == 'home' %}
         <!-- pronouns only show on the homepages -->
-        <span class="smol-quarter accent-colour baseline">
+        <span class="smol-quarter accent-colour baseline" ondblclick="rainbowomg()">
             {% if page.lang != 'cy' %}he/him{% else %}e/o{% endif %}
         </span>
         {% endif %}
     </h1>
 </header>
-
