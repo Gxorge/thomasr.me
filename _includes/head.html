@@ -1,24 +1,3 @@
-{% if page.image %}
-    {% if page.layout == 'post' %}
-        <!-- blog post w image -->
-        {% include legacy/image_folder.html %}
-        {% assign metaImageURL = /assets/img/posts/{{ post_img_folder }}/{{ page.image }} %}
-    {% else %}
-        <!-- page w image -->
-        <!-- {{ page.image }} -->
-        {% capture metaImageURL %}{{ page.image }}{% endcapture %}
-        {% endif %}
-{% else %}
-    <!-- page w/o image, using fallback -->
-    {% assign metaImageURL = "/assets/img/blondtommo.jpg" %}
-{% endif %}
-
-{% if page.author %}
-    {% assign metaAuthor = {{ page.author }} %}
-{% else %}
-    {% assign metaAuthor = "Tom" %}
-{% endif %}
-
 <!-- page meta -->
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">

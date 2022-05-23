@@ -1,62 +1,22 @@
----
-layout: compress
----
 <!DOCTYPE html>
-<html lang="{% if page.lang %}{{ page.lang }}{% else %}en-GB{% endif %}">
-
-<!-- 
-thomas robinson, aka @itsmeimtom
-    thomasr.me / trobinson.me / tomr.me
--
-code for this site:
-    https://github.com/{{site.github}}/thomasr.me
--
-code for this page:
-    https://github.com/{{site.github}}/thomasr.me/blob/master/{{ page.path }}
-    last modified at {{ page.last_modified_at | date: '%Y-%m-%d %H:%M' }}
--
-jekyll {{ jekyll.environment }} build started at {{ site.time }}
-    /about/this-site/
--->
-
+<html lang="en">
 <head>
     {% include head.html %}
 </head>
-<body class="{% if page.wide == 'ish' %}wide-ish{% elsif page.wide %}wide{% endif %}" {% if page.id %}id="{{ page.id }}"{% endif %}>
-    <aside id="bi-bar" aria-hidden="true"></aside>
-    <header id="site-header">
-        {% include header.html %}
-    </header>
-    
-    <main>
-        {% if page.nometa != true %}
-            <article aria-labelledby="page-title">
-            {% if page.layout == 'post' %}
-                {% include post-meta.html %}
-            {% else %}
-                {% include page-meta.html %}
-            {% endif %}
-        {% else %}
-            <article>
-        {% endif %}
+<body>
+    {% include header.html %}
 
-            {{ content }}
-        </article>
+    <main>
+    <header id="page-header">
+        <h1>{{ page.title }}</h1>
+        {% if page.description %}
+            <h2>{{ page.description }}</h2>
+        {% endif %}
+    </header>
+
+    {{ content }}
     </main>
 
-    {% if page.nometa != true %}
-    <footer>
-        {% include footer.html %}
-    </footer>
-    {% endif %}
-
-    <script src="/assets/script/common.js"></script>
-    <script src="/assets/script/colours.js"></script>
-
-    {% if page.scripts %}
-    {% for script in page.scripts %}
-        <script src="{{ script }}"></script>
-    {% endfor %}
-    {% endif %}
+    {% include footer.html %}
 </body>
 </html>

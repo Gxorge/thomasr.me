@@ -1,21 +1,9 @@
-<a href="#after-nav" id="a11y-skip">skip navigation</a>
+<aside id="colour-bar"></aside>
 
-<a href="/" id="home-link">
-  <h1 id="site-title">{{ site.title }}</h1>
-</a>
+<header>
+    <h1><a href="/" title="Homepage">Thomas Robinson</a></h1>
 
-<nav>
-  <ul>
-    {% for item in site.menus.header %}
-      <li>
-      {% if item.url contains "http" %}
-        <a href="{{ item.url }}">{{ item.title }} <i class="fas fa-external-link-alt" aria-hidden="true"></i><span class="sr-only">(external link)</span></a>
-      {% else %}
-        <a href="{{ item.url }}" {% if page.url contains item.identifier %}class="current-page" {% endif %}>{{ item.title }}</a>
-      {% endif %}
-      </li>
-    {% endfor %}
-  </ul>
-</nav>
-
-<span id="after-nav"></span>
+    {% if page.layout != 'home' %}
+    <a href="/">&laquo; Homepage</a>
+    {% endif %}
+</header>

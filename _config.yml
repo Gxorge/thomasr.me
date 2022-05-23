@@ -19,18 +19,6 @@ flickr: "193606210@N05"
 
 permalink: /:year/:title/
 
-defaults:
-  - scope:
-      path: ""
-      type: "posts"
-    values:
-      layout: "post"
-  - scope:
-      path: ""
-      type: "projects"
-    values:
-      layout: "default"
-
 sass:
   sass_dir: assets/style
   style: compressed
@@ -42,29 +30,12 @@ compress_html:
   ignore:
     envs: ["development"]
 
-plugins:
+# plugins:
   # - jekyll-redirect-from
-  - jekyll-mentions
-  - jekyll-archives
-  - jekyll-last-modified-at
-  - jekyll-sitemap
+  # - jekyll-mentions
+  # - jekyll-archives
+  # - jekyll-last-modified-at
+  # - jekyll-sitemap
 
 exclude:
   - vercel.json
-  
-feed:
-  path: /blog/feed.xml
-  excerpt_only: true
-  posts_limit: 0
-
-jekyll-mentions:
-  base_url: https://twitter.com
-
-jekyll-archives:
-  layout: post-archive
-  enabled:
-    - categories
-    - year
-  permalinks:
-    year: '/:year/'
-    category: "/blog/archive/:name/"

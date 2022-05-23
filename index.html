@@ -1,0 +1,43 @@
+---
+layout: home
+title: "Home"
+notitle: true
+description: "✌🏻"
+permalink: /
+---
+
+<main>
+    
+<section id="about">
+    <h2 class="sr-only">About Me &amp; Links</h2>
+
+    <p>
+        <b>Hello!</b> My name is Thomas<sup>he/him</sup>, but it’s easier to write Tom. I’m an IT student from the middle of the UK.
+        I’m interested in computer hardware and software, particularly networking and systems administration. I have a <a href="/uses">/uses page</a>!
+    </p>
+    <p>
+        You can find me on <a href="https://github.com/itsmeimtom" title="GitHub: /itsmeimtom">GitHub</a>, <a href="https://www.linkedin.com/in/thomasr-me" title="LinkedIn: /in/thomasr-me">LinkedIn</a> and <a href="https://www.last.fm/user/itsmeimtom" title="Last.Fm: /user/itsmeimtom">Last.Fm</a>.<br>
+        My email address is <a id="js-email"><span id="js-email-text">me [at] TomR [dot] me</span></a> (PGP <a href="https://keybase.io/itsmeimtom/pgp_keys.asc">BE73 4B2B BBDD 8864</a>). For a copy of my CV, you are welcome to get in touch.
+    </p>
+</section>
+
+<section id="projects">
+    <h2 class="sr-only">Hobbies &amp; Projects</h2>
+
+    <p>
+        I enjoy <a href="https://www.flickr.com/photos/193606210@N05">taking photos</a> and I maintain a <a href="https://wiki.TomR.me/lab">homelab</a> which runs several services.
+    </p>
+
+    <p>
+        I've developed <a href="https://assistant.google.com/services/a/uid/0000002b9e81557d">a Google Assistant Action</a> to fetch train departures, <a href="https://thomasr.me/projects/speedtestmap/">a map</a> to plot internet speedtests, <a href="https://github.com/itsmeimtom/beforeyougogo">a basic URL shortener</a>, <a href="https://thomasr.me/projects/redditunsub/">a tool</a> to bulk-unsubscribe from subreddits among many other projects that can be found on my GitHub.
+        I've created and maintaned simple websites for <a href="https://magiccap.me/">MagicCap</a>, <a href="https://archive.thomasr.me/33rpm/">33rpm</a>, <a href="https://archive.thomasr.me/melonz.app/">Melonz</a>.
+    </p>
+</section>
+
+</main>
+
+<script>
+    const email = atob('bWVAVG9tUi5tZQ==');
+    document.getElementById('js-email-text').innerHTML = email;
+    document.getElementById('js-email').href = `mailto:${email}`;
+</script>
