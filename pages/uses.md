@@ -1,7 +1,7 @@
 ---
 layout: default
-title: Uses
-description: 'Hardware and Software I make use of on a regular basis'
+title: What I Use
+description: 'Hardware, Software & Services'
 image: /assets/img/posts/2020-thinkpad/thinkpad_led.jpg
 permalink: "/uses/"
 # menus:
@@ -11,7 +11,7 @@ permalink: "/uses/"
 #     identifier: uses
 ---
 
-Inspired by [uses.tech](https://uses.tech/) (and especially [Tai's page](https://taisukemino.com/uses/)), here's my /uses, last updated on {{ page.last_modified_at | date: '%a, %b %d, %Y' }}.
+Inspired by [uses.tech](https://uses.tech/) (and especially [Tai's page](https://taisukemino.com/uses/)), here's my contribution, last updated on {{ page.last_modified_at | date: '%A %d %b, %Y' }}.
 
 ---
 
@@ -28,7 +28,7 @@ Inspired by [uses.tech](https://uses.tech/) (and especially [Tai's page](https:/
 - I **complain about** Windows 10 Pro
 - I **complain less about** [Debian](https://www.debian.org/) &amp; [Manjaro](https://manjaro.org/)
 - I **browse** with [Firefox](https://www.mozilla.org/en-GB/firefox/new/)
-- I **code** in [VS Code](https://code.visualstudio.com/)
+- I **code** in [VS Code](https://code.visualstudio.com/) with the Gruvbox theme and Comic Mono font.
 - I **commit** with [GitKraken](https://www.gitkraken.com/)
 
 ## Services
@@ -39,9 +39,8 @@ Inspired by [uses.tech](https://uses.tech/) (and especially [Tai's page](https:/
 - I **push to** [GitHub](https://github.com/itsmeimtom) and [hosted 
 GitLab](https://git.tomr.me)
 - I **stay organised** with [Notion](https://notion.so/imtom) (see [my wiki](https://wiki.tomr.me)!)
-- I **store documents** on Google Drive
+- I **store documents** in Google Drive
 - I **store photos** in iCloud Photos
-- Dwi'n **dysgu Cymraeg** with [Duolingo](https://invite.duolingo.com/BDHTZTB5CWWKSQSLVS6XCSMGZM)
 
 ---
 
