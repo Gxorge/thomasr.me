@@ -28,6 +28,19 @@ header#site-header {
         }
     }
 
+    img {
+        position: relative;
+        width: 100%;
+        margin-bottom: -8em;
+        margin-top: 1em;
+        border-radius: 8px 8px 0 0;
+        mask-image: linear-gradient(to bottom, #000 0%, transparent 80%);
+        -webkit-mask-image: linear-gradient(to bottom, #000 0%, transparent 80%);
+        transform: scale(1.1);
+        filter: saturate(1.2) contrast(1.2);
+        z-index: -1;
+    }
+
 }
 
 header#page-header {

@@ -73,6 +73,11 @@ a.butt {
     padding: 1px 4px;
     margin: 0 2px;
 
+    @include on-small-screen {
+        margin: 2px 4px;
+        padding: 2px 8px;
+    }
+
     font-weight: normal;
     text-decoration: none;
 

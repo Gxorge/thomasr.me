@@ -15,8 +15,16 @@ footer#site-footer {
     }
 
     text-transform: lowercase;
+    @include on-small-screen {
+        text-align: center;
+    }
 
     a {
         font-weight: normal;
+    
+        @include on-small-screen {
+            display: block;
+            width: 100%;
+        }
     }
 }

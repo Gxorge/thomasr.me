@@ -2,11 +2,16 @@
 
 <header id="site-header">
     
+    {% if page.layout == 'home' %}
+        <img src="/assets/img/blondtommodrawing.jpg" alt="A toddler-age Thomas laying on a carpet, smiling and clutching a pen" aria-hidden="true">
+    {% endif %}
+
+
     <h1><a href="/" title="Homepage">
         {% if page.layout != 'home' %}
             Thomas Robinson
         {% else %}
-            Hello! I'm Tom! <span class="smol-quarter accent-colour baseline">he/him</span>
+            Hello! I'm&nbsp;Tom!&nbsp;<span class="smol-quarter accent-colour baseline">he/him</span>
         {% endif %}
     </a></h1>
 </header>
