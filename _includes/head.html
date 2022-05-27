@@ -16,13 +16,13 @@
 <meta property="og:url" content="{{ site.url }}{{ page.url }}">
 <meta property="og:type" content="website">
 <meta property="og:author" content="{{ site.title }}">
-<meta property="og:image" content="/assets/img/blondtommodrawing.jpg">
+<meta property="og:image" content="{{ site.baseurl }}/assets/img/blondtommodrawing.jpg">
 <!-- twitter cards -->
 <meta name="twitter:title" content="{{ page.title }} &mdash; {{ site.title }}">
 <meta name="twitter:description" content="{{ page.description }}">
 <meta name="twitter:creator" content="@itsmeimtom">
 <meta name="twitter:author" content="{{ site.title }}">
-<meta name="twitter:image" content="/assets/img/blondtommodrawing.jpg">
+<meta name="twitter:image" content="{{ site.baseurl }}/assets/img/blondtommodrawing.jpg">
 
 <!-- theme colour for accenting -->
 <meta name="theme-color" content="#60A5FA">
@@ -31,10 +31,10 @@
 <title>{% if page.layout != 'home' %}{{ page.title }} &mdash; {% endif %}{{ site.title }}</title>
 
 <!-- favicon -->
-<link rel="shortcut icon" href="/assets/img/twemoji-peace-square.png" type="image/png">
+<link rel="shortcut icon" href="{{ site.baseurl }}/assets/img/twemoji-peace-square.png" type="image/png">
 
 <!-- main css -->
-<link rel="stylesheet" href="/assets/style/main.css">
+<link rel="stylesheet" href="{{ site.baseurl }}/assets/style/main.css">
 
 <noscript>
     <!-- style is only allowed as child of noscript when in <head> -->

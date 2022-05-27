@@ -11,7 +11,7 @@ permalink: /blog/
     <!-- ooooh, a hidden post! -->
   {% else %}
       <li class="post" style="margin-bottom: 1em;">
-      <h2 style="margin: 0;"><a href="{{ page.url }}">{{ page.title }}</a></h2>
+      <h2 style="margin: 0;"><a href="{{ page.url | relative_url }}">{{ page.title }}</a></h2>
       <h3 style="margin: 0;">{{ page.date | date_to_long_string: 'ordinal' }}
         {% if page.category %}<span class="smol">in {% for c in page.category %}{{ c }}{% unless forloop.last %}, {% endunless %}{% endfor %}{% endif %}</span></span></h3>
 
