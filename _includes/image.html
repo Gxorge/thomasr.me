@@ -1,11 +1,18 @@
 <figure class="image{% if include.caption %} has-caption{% endif %}">
-    
+    {% include post-image-folder.html %}
+
+
     {% if include.src-small %}
         {% assign imageSrc = include.src-small %}
         {% assign bigImageLink = include.src %}
     {% else %}
         {% assign imageSrc = include.src %}
         {% assign bigImageLink = include.src %}
+    {% endif %}
+
+    {% if include.appendImgFolder %}
+        {% assign imageSrc = imageSrc | prepend: postImageFolder %}
+        {% assign bigImageLink = bigImageLink | prepend: postImageFolder %}
     {% endif %}
 
     <a href="{{ bigImageLink }}" target="_blank" rel="noopener noreferrer">

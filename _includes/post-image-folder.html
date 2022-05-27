@@ -1,0 +1,9 @@
+{% if page.layout == 'post' and include.appendImgFolder %}
+<!-- /assets/img/post/YYYY-page-slug/ -->
+{% assign postYear = page.date | date: "%Y" %}
+{% assign postSlug = page.slug | prepend: '-' %}
+{% assign imageFolder = '/assets/img/post/' %}
+
+{% assign postImageFolder = postYear | append: postSlug | prepend: imageFolder | append : '/' %}
+<!-- {{ postImageFolder }} -->
+{% endif %}
