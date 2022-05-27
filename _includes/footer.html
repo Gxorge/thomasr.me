@@ -54,6 +54,7 @@
 
 {% if page.layout == 'post' and page.image %}
 <!-- we're on a post with an image, set the post image background -->
+{% include post-image-folder.html %}
 <style>
     h1#page-title::before {
         position: relative;
@@ -64,8 +65,7 @@
         margin-bottom: -3em;
         margin-top: 0.5em;
 
-        background-image: url('{{ page.image | relative_url }}');
-
+        background-image: url('{{ page.image | prepend: postImageFolder }}');
     }
 </style>
 {% endif %}

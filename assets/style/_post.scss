@@ -27,4 +27,34 @@ body.post {
             z-index: -1;
         }
     }
+
+    article {
+        figure.image {
+            margin: 2em 0;
+            padding: 0;
+            max-width: 100%;
+
+            a {
+                cursor: zoom-in;
+
+                &:hover img {
+                    border-color: $accent;
+                    @include on-big-screen {
+                        transform: scale(1.1);
+                    }
+                }
+            }
+
+            img {
+                width: calc(100% - 4px);
+                border-radius: 4px;
+                border: 2px solid $accentLight;
+                @include in-light-mode {
+                    border-color: $accentDark;
+                }
+                transition: all 0.2s ease-out;
+            }
+        }
+
+    }
 }
