@@ -41,6 +41,7 @@ body.post {
                     border-color: $accent;
                     @include on-big-screen {
                         transform: scale(1.1);
+                        box-shadow: 0px 8px 16px 2px #222f;
                     }
                 }
             }
@@ -48,6 +49,7 @@ body.post {
             img {
                 width: calc(100% - 4px);
                 border-radius: 4px;
+                box-shadow: 0 4px 0 0 #0000;
                 border: 2px solid $accentLight;
                 @include in-light-mode {
                     border-color: $accentDark;
