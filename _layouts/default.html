@@ -7,18 +7,19 @@ layout: compress
 <head>
     {% include head.html %}
 </head>
-<body>
+<body class="{{ page.layout }}">
     {% include header.html %}
 
     <main>
-    <header id="page-header">
-        <h1 id="page-title" class="weight-700">{{ page.title }}</h1>
-        {% if page.description %}
-            <h2 id="page-description" class="weight-400">{{ page.description }}</h2>
-        {% endif %}
-    </header>
+    {% if page.layout != 'home' %}<article>{% endif %}
 
-    {{ content }}   
+    {% include page-header.html %}
+
+    {{ content }}
+
+    {% include page-footer.html %}
+    
+    {% if page.layout != 'home' %}</article>{% endif %}
     </main>
 
     {% include footer.html %}

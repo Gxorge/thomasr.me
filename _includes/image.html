@@ -1,0 +1,21 @@
+<figure class="image{% if include.caption %} has-caption{% endif %}">
+    
+    {% if include.src-small %}
+        {% assign imageSrc = include.src-small %}
+        {% assign bigImageLink = include.src %}
+    {% else %}
+        {% assign imageSrc = include.src %}
+        {% assign bigImageLink = include.src %}
+    {% endif %}
+
+    <a href="{{ bigImageLink }}" target="_blank" rel="noopener noreferrer">
+        <img src="{{ imageSrc }}" alt="{{ include.alt }}">
+    </a>
+
+
+    {% if include.caption %}
+    <figcaption>
+        {{ include.caption }}
+    </figcaption>
+    {% endif %}
+</figure>

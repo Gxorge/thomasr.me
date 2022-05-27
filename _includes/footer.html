@@ -7,10 +7,20 @@
     </p>
 </footer>
 
-<script src="/assets/script/colours.js"></script>
+
+{% if page.layout == 'post' or page.easyread or page.content.size > 2000 %}
+<script>
+    // this only sets the accent colour,
+    // not the foreground and blackground colours
+    // to make long-form pages easier to read
+    const onlySetAccentColour = true;
+</script>
+{% endif %}
+<script src="{{ site.baseurl }}/assets/script/colours.js"></script>
+
 {% if page.scripts %}
     {% for script in page.scripts %}
-        <script src="{{ script }}"></script>
+        <script src="{{ script | relative_url }}"></script>
     {% endfor %}    
 {% endif %}
 
@@ -40,4 +50,13 @@
     document.getElementById('js-email-text').innerHTML = email;
     document.getElementById('js-email').href = `mailto:${email}`;
 </script>
+{% endif %}
+
+{% if page.layout == 'post' and page.image %}
+<!-- we're on a post with an image, set the post image background -->
+<style>
+    h1#page-title::before {
+        background-image: url('{{ page.image | relative_url }}');
+    }
+</style>
 {% endif %}

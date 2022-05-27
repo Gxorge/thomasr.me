@@ -1,16 +1,11 @@
-title: Thomas Robinson
+title: ThomasR.me
 
 future: true
 baseurl: ""
 url: https://thomasr.me
 locale: en_GB
 
-collections:
-  projects:
-    layout: default
-    output: true
-
-permalink: /:year/:title/
+permalink: /blog/:year/:title/
 
 sass:
   sass_dir: assets/style
