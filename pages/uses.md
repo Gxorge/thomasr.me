@@ -2,13 +2,7 @@
 layout: default
 title: What I Use
 description: 'Hardware, Software & Services'
-image: /assets/img/posts/2020-thinkpad/thinkpad_led.jpg
-permalink: "/uses/"
-# menus:
-#   header:
-#     title: Uses
-#     weight: 40
-#     identifier: uses
+permalink: /uses/
 ---
 
 Inspired by [uses.tech](https://uses.tech/) (and especially [Tai's page](https://taisukemino.com/uses/)), here's my contribution, last updated on {{ page.last_modified_at | date: '%A %d %b, %Y' }}.
