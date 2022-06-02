@@ -11,8 +11,8 @@ body.post {
             }
 
             border-radius: 8px 8px 0 0;
-            mask-image: linear-gradient(to bottom, #000 0%, transparent 80%);
             -webkit-mask-image: linear-gradient(to bottom, #000 0%, transparent 80%);
+            mask-image: linear-gradient(to bottom, #000 0%, transparent 80%);
     
             @include on-big-screen {
                 transform: scale(1.1);
@@ -54,7 +54,8 @@ body.post {
                 @include in-light-mode {
                     border-color: $accentDark;
                 }
-                transition: all 0.2s ease-out;
+                transform: scale(1.0);
+                transition: transform 0.2s ease-out, box-shadow 0.2s ease-out, border-color 0.2s ease-out;
             }
         }
 
