@@ -25,6 +25,7 @@
 {% endif %}
 
 {% if page.layout == 'home' %}
+<!-- homepage greeting -->
 <script>
     let now = new Date();
     let h = now.getHours();
@@ -45,6 +46,7 @@
     document.getElementById('js-greeting').innerText = greeting;
 </script>
 
+<!-- email obfuscation -->
 <script>
     const email = atob('bWVAVG9tUi5tZQ==');
     document.getElementById('js-email-text').innerHTML = email;
