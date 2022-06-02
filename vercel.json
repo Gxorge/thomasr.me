@@ -75,6 +75,14 @@
                     "value": "default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; font-src 'self'; connect-src 'self' https://github-pages.thomasr.me; img-src 'self' data:; frame-src 'self';" 
                 }
             ]
+        },
+        {
+            "source": "/blog/feed.xml",
+            "headers": [{
+                    "key": "Content-Type",
+                    "value": "application/rss+xml"
+                }
+            ]
         }
     ]
 }
