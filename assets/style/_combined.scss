@@ -11,24 +11,31 @@
     @media screen and (min-width: 60em) { @content; }
 }
 
-$fn-headings: 'Libre Baskerville', 'Merriweather', 'Cambria', 'Cochin', 'Georgia', 'Times', 'Times New Roman', serif;
-$fn-copy: 'Merriweather Sans', 'Verdana', 'Tahoma', 'Helvetica', sans-serif;
-$width: 40; // em
-
-// tailwind "stone" is default, neutral
 :root {
+    // tailwind "stone" is default, neutral
     --accentDark: #1C1917; // 900
     --accentDarkIsh: #44403C; // 700
-    --accent: #60A5FA; // blue 500
+    --accent: #818CF8; // fuchsia 300
+    @include in-light-mode() {
+        --accent: #A21CAF; // fuchsia 600
+    }
     --accentLightIsh: #F5F5F4; // 100 
     --accentLight: #FAFAF9; // warm grey 50
+
+    --width: 40em;
+    --fn-headings: 'Libre Baskerville', 'Merriweather', 'Cambria', 'Cochin', 'Georgia', 'Times', 'Times New Roman', serif;
+    --fn-copy: 'Merriweather Sans', 'Verdana', 'Tahoma', 'Helvetica', sans-serif;
 }
 
 $accentDark: var(--accentDark, #1C1917);
 $accentDarkIsh: var(--accentDarkIsh, #44403C);
-$accent: var(--accent, #60A5FA);
+$accent: var(--accent, #0EA5E9);
 $accentLightIsh: var(--accentLightIsh, #F5F5F4);
 $accentLight: var(--accentLight, #FAFAF9);
+
+$fn-headings: var(--fn-headings, serif);
+$fn-copy: var(--fn-copy, sans-serif); 
+$width: var(--width, 40em);
 
 @import 'fonts/libre-baskerville.scss';
 @import 'fonts/merriweather-sans.scss';
@@ -36,3 +43,4 @@ $accentLight: var(--accentLight, #FAFAF9);
 @import '_header.scss';
 @import '_footer.scss';
 @import '_home.scss';
+@import '_post.scss'

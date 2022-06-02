@@ -2,17 +2,23 @@
 
 <header id="site-header">
     <h1>
-        <a href="/" title="Homepage">
         {% if page.layout != 'home' %}
             <!-- not on a homepage -->
-            Thomas Robinson
+            <a href="{{ site.baseurl }}/" title="Homepage">{{ site.title }}</a>
+
+            {% if page.layout == 'post' %}
+                <!-- or page.title | downcase contains 'blog' -->
+                <!-- we're a blog post! -->
+                &mdash; <a href="/blog/">blog</a>
+            {% endif %}
         {% else %}
             <!-- we're on a homepage -->
+            <a href="{{ site.baseurl }}/" title="Homepage">
             <i class="baskerville-italic"><span class="weight-400" id="js-greeting">
                 {% if page.lang != 'cy' %}Hello{% else %}Helo{% endif %},
-            </span></i> <span class="weight-700">{% if page.lang != 'cy' %}I'm&nbsp;{% endif %}Tom{% if page.lang == 'cy' %}&nbsp;Dw&nbsp;i{% endif %}!</span></span><!--
+            </span></i> <span class="weight-700">{% if page.lang != 'cy' %}I'm&nbsp;{% endif %}Tom{% if page.lang == 'cy' %}&nbsp;Dw&nbsp;i{% endif %}!</span></span></a><!--
      -->{% endif %}<!-- comments here to ensure no whitespace after the quote
-     --></a>
+     -->
         {% if page.layout == 'home' %}
         <!-- pronouns only show on the homepages -->
         <span class="smol-quarter accent-colour baseline" ondblclick="rainbowomg()">

@@ -22,7 +22,7 @@ body {
 
 
 main {
-    max-width: #{$width}em;
+    max-width: $width;
     margin: 0 auto;
     line-height: 1.5em;
 }
@@ -115,11 +115,58 @@ hr {
     border: none;
     border-radius: 1px;
     padding: 1px 0;
-    max-width: #{$width / 5}em;
+    max-width: calc($width / 5);
 }
 
 
 // helper classes
+
+aside.callout {
+    position: sticky;
+    top: 8px; // avoid colour bar
+
+    margin: 0;
+    padding: 1em;
+    width: calc(100% - 2em);
+
+    background-color: $accentDark; // bg colour required for overlapping callouts
+    color: $accentLightIsh;
+
+    @include in-light-mode {
+        color: $accentDarkIsh;
+        background-color: $accentLight;
+    }
+
+    border: 2px solid $accent;
+    border-radius: 2px;
+    
+    &:not(:last-child) {
+        margin-bottom: 1em;
+    }
+
+    span.callout-icon {
+        display: block;
+        float: left;
+        width: 1.25em;
+        text-align: right;
+        font-size: 2em;
+        margin: 0 1em 1em 0;
+
+        @include on-small-screen {
+            float: none;
+            display: block;
+            width: 100%;
+            margin: 0 0 1em 0;
+            text-align: center;
+        }
+    }
+
+    p.callout-text {
+        margin: 0 8px;
+        text-transform: none;
+        line-height: 1.5em;
+    }
+}
 
 .smol {
     font-size: 85%;
