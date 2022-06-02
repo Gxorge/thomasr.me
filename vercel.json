@@ -4,7 +4,8 @@
     "trailingSlash": true,
     "cleanUrls": true,
 
-    "redirects": [{
+    "redirects": [
+        {
             "source": "/(faq|contact|who|now|about|projects)(\/*)",
             "destination": "/"
         },
@@ -46,7 +47,8 @@
 
     "headers": [{
             "source": "/:path*",
-            "headers": [{
+            "headers": [
+                {
                     "key": "Strict-Transport-Security",
                     "value": "max-age=63072000; includeSubDomains; preload"
                 },
@@ -62,7 +64,8 @@
         },
         {
             "source": "/",
-            "headers": [{
+            "headers": [
+                {
                     "key": "Strict-Transport-Security",
                     "value": "max-age=63072000; includeSubDomains; preload"
                 },
@@ -78,7 +81,8 @@
         },
         {
             "source": "/blog/feed.xml",
-            "headers": [{
+            "headers": [
+                {
                     "key": "Content-Type",
                     "value": "application/rss+xml"
                 }
