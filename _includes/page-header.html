@@ -1,4 +1,15 @@
 <header id="page-header">
+    {% for c in page.callouts %}
+        <aside class="callout">
+            <span class="callout-icon">
+                {{ c.emoji }}
+            </span>
+            <p class="callout-text">
+                {{ c.text }}
+            </p>
+        </aside>
+    {% endfor %}
+
     {% if page.layout == 'post' %}
         <h2 id="page-date" class="smol accent-colour weight-400">{{ page.date | date_to_long_string: 'ordinal'}}</h2>
     {% endif %}

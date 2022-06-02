@@ -115,11 +115,47 @@ hr {
     border: none;
     border-radius: 1px;
     padding: 1px 0;
-    max-width: calc($width / 5});
+    max-width: calc($width / 5);
 }
 
 
 // helper classes
+
+aside.callout {
+    margin: 0;
+    padding: 1em;
+    width: calc(100% - 2em);
+
+    background-color: $accentDarkIsh;
+    color: $accentLightIsh;
+
+    @include in-light-mode {
+        color: $accentDarkIsh;
+        background-color: $accentLightIsh;
+    }
+
+    border: 2px solid $accent;
+    border-radius: 2px;
+ 
+    span.callout-icon {
+        float: left;
+        font-size: 2em;
+        margin: 0 1em 1em 0;
+
+        @include on-small-screen {
+            float: none;
+            display: block;
+            width: 100%;
+            margin: 0 0 1em 0;
+            text-align: center;
+        }
+    }
+
+    p.callout-text {
+        margin: 0 8px;
+        text-transform: none;
+    }
+}
 
 .smol {
     font-size: 85%;
