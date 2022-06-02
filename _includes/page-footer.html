@@ -1,0 +1,10 @@
+{% if page.layout == 'post' %}
+    <footer id="page-footer">
+        <hr>
+
+        <p>
+            I don't have a comments section, so please <a href="mailto:post-comment@tomr.me?subject={{ page.title | url_encode }}">let me know</a> if you have any suggestions, improvements or comments about this post. You can also <a href="https://github.com/itsmeimtom/thomasr.me/blob/master/{{ page.path }}">edit this page</a> on GitHub. 
+        </p>
+        <p>Thank you for reading :)</p>
+    </footer>
+{% endif %}

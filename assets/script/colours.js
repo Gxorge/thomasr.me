@@ -12,11 +12,16 @@ function setColour(hue) {
     localStorage.setItem('last-colour', hue);
     document.querySelector('meta[name="theme-color"]').content = `${hslToHex(hue, 40, 50)}`;
 
-    setCssAccent('Dark', hslToHex(hue, 40, 10));
-    setCssAccent('DarkIsh', hslToHex(hue, 50, 20));
+    // if onlySetAccentColour is set, do not
+    // mess with the background/foreground colours
+    if(typeof onlySetAccentColour === 'undefined')  {
+        setCssAccent('Dark', hslToHex(hue, 40, 10));
+        setCssAccent('DarkIsh', hslToHex(hue, 50, 20));
+        setCssAccent('LightIsh', hslToHex(hue, 50, 80));
+        setCssAccent('Light', hslToHex(hue, 35, 95));
+    }
+
     setCssAccent('', hslToHex(hue, 40, 50));
-    setCssAccent('LightIsh', hslToHex(hue, 50, 80));
-    setCssAccent('Light', hslToHex(hue, 35, 95));
 }
 
 function pickColour(hue) {

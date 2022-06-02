@@ -1,0 +1,40 @@
+<figure class="image{% if include.caption %} has-caption{% endif %}">
+    {% include post-image-folder.html %}
+    
+    <!--
+        src-small can be used for using smaller images in posts
+        that can link to bigger images when clicked
+    -->
+    {% if include.src-small %}
+        {% assign imageSrc = include.src-small %}
+        {% assign bigImageLink = include.src %}
+    {% else %}
+        <!--
+            if there's no small image both the link and the src
+            should be the same
+        -->
+        {% assign imageSrc = include.src %}
+        {% assign bigImageLink = include.src %}
+    {% endif %}
+
+    {% if include.prependImgFolder %}
+        <!-- 
+            if this flag is used on the include tag
+            then we will automatically prepend the
+            post image URL directory to the image sources
+         -->
+        {% assign imageSrc = imageSrc | prepend: postImageFolder %}
+        {% assign bigImageLink = bigImageLink | prepend: postImageFolder %}
+    {% endif %}
+
+    <a href="{{ bigImageLink }}" target="_blank" rel="noopener noreferrer">
+        <img src="{{ site.baseurl }}{{ imageSrc }}" alt="{{ include.alt }}">
+    </a>
+
+
+    {% if include.caption %}
+    <figcaption>
+        {{ include.caption }}
+    </figcaption>
+    {% endif %}
+</figure>
