@@ -28,4 +28,4 @@ None of the above JS is required for the site to function; this is not a PWA.
 
 - Jekyll **{{ jekyll.version }}**, **{{ jekyll.environment }}** 
 - Built Started at **{{ site.time | date: '%Y-%m-%d %H:%M' }}**
-- **{{ site.pages.size }}** Pages, **{{ site.static_files.size }}** Static Files
+- **{{ site.pages.size }}** Pages, **{{ site.posts.size }}** Posts, **{{ site.static_files.size }}** Static Files
