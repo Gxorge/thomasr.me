@@ -2,7 +2,7 @@
 layout: default
 title: Twitter Bot
 description: "What is @itsmeimabot?"
-permalink: /projects/twitterbot/
+permalink: /twitterbot/
 ---
 
 [@itsmeimabot](https://twitter.com/itsmeimabot) was a Twitter account that used to post gibberish that it had generated from my previous Tweets. It is no longer operational.

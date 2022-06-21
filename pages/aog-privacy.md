@@ -2,7 +2,7 @@
 layout: default
 title: Actions on Google Privacy Information
 description: "Privacy Policy for Google Assistant Actions & Similar"
-permalink: /projects/aog-privacy/
+permalink: /aog-privacy/
 ---
 
 ## All Actions
