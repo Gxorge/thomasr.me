@@ -18,8 +18,8 @@
         </aside>
     {% endfor %}
 
-    {% if page.layout == 'post' %}
-        <!-- Post publication date -->
+    {% if page.layout == 'thing' %}
+        <!-- Thing publication date -->
         <h2 id="page-date" class="smol accent-colour weight-400">{{ page.date | date_to_long_string: 'ordinal'}}</h2>
     {% endif %}
 

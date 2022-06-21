@@ -7,6 +7,12 @@ locale: en_GB
 
 permalink: /:title/
 
+collections:
+  things:
+    output: true
+    permalink: /:title/
+    sort_by: date
+
 sass:
   sass_dir: assets/style
   style: compressed

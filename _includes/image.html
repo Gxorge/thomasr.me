@@ -1,5 +1,5 @@
 <figure class="image{% if include.caption %} has-caption{% endif %}">
-    {% include post-image-folder.html %}
+    {% include thing-image-folder.html %}
     
     <!--
         src-small can be used for using smaller images in posts
@@ -23,8 +23,8 @@
             then we will automatically prepend the
             post image URL directory to the image sources
          -->
-        {% assign imageSrc = imageSrc | prepend: postImageFolder %}
-        {% assign bigImageLink = bigImageLink | prepend: postImageFolder %}
+        {% assign imageSrc = imageSrc | prepend: thingImageFolder %}
+        {% assign bigImageLink = bigImageLink | prepend: thingImageFolder %}
     {% endif %}
 
     <a href="{{ bigImageLink }}" target="_blank" rel="noopener noreferrer">
