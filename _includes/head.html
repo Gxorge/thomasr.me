@@ -28,7 +28,7 @@
 <meta name="theme-color" content="#60A5FA">
 
 <!-- page title -->
-<title>{% if page.layout != 'home' %}{{ page.title }} &mdash; {% endif %}{{ site.title }}{% if site.environment != 'production' %} (NOT PROD){% endif %}</title>
+<title>{% if page.layout != 'home' %}{{ page.title }} &mdash; {% endif %}{{ site.title }}{% if jekyll.environment != 'production' %} (NOT PROD){% endif %}</title>
 
 <!-- favicon -->
 <link rel="shortcut icon" href="{{ site.baseurl }}/assets/img/twemoji-peace-square.png" type="image/png">
