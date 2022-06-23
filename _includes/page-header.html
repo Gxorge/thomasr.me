@@ -18,9 +18,9 @@
         </aside>
     {% endfor %}
 
-    {% if page.layout == 'post' %}
-        <!-- Post publication date -->
-        <h2 id="page-date" class="smol accent-colour weight-400">{{ page.date | date_to_long_string: 'ordinal'}}</h2>
+    {% if page.layout == 'thing' %}
+        <!-- Thing publication date -->
+        <h2 id="page-date" class="smol accent-colour weight-400">created {{ page.date | date_to_long_string: 'ordinal'}}</h2>
     {% endif %}
 
     <h1 id="page-title" class="weight-700">{{ page.title }}</h1>

@@ -1,0 +1,63 @@
+body.post, body.thing {
+    header#page-header {
+        padding: 0;
+        text-align: left;
+        margin-bottom: 2em;
+    
+        h1#page-title::before {
+
+            @include on-small-screen {
+                margin-top: 0;
+            }
+
+            border-radius: 8px 8px 0 0;
+            -webkit-mask-image: linear-gradient(to bottom, #000 0%, transparent 80%);
+            mask-image: linear-gradient(to bottom, #000 0%, transparent 80%);
+    
+            @include on-big-screen {
+                transform: scale(1.1);
+            }
+
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            filter: saturate(1.2) contrast(1.2);
+            content: "";
+            
+            z-index: -1;
+        }
+    }
+
+    article {
+        figure.image {
+            margin: 2em 0;
+            padding: 0;
+            max-width: 100%;
+
+            a {
+                cursor: zoom-in;
+
+                &:hover img {
+                    border-color: $accent;
+                    @include on-big-screen {
+                        transform: scale(1.1);
+                        box-shadow: 0px 8px 16px 2px #222f;
+                    }
+                }
+            }
+
+            img {
+                width: calc(100% - 4px);
+                border-radius: 4px;
+                box-shadow: 0 4px 0 0 #0000;
+                border: 2px solid $accentLight;
+                @include in-light-mode {
+                    border-color: $accentDark;
+                }
+                transform: scale(1.0);
+                transition: transform 0.2s ease-out, box-shadow 0.2s ease-out, border-color 0.2s ease-out;
+            }
+        }
+
+    }
+}

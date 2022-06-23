@@ -5,7 +5,13 @@ baseurl: ""
 url: https://thomasr.me
 locale: en_GB
 
-permalink: /blog/:year/:title/
+permalink: /:title/
+
+collections:
+  things:
+    output: true
+    permalink: /:title/
+    sort_by: date
 
 sass:
   sass_dir: assets/style

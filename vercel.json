@@ -26,8 +26,12 @@
             "destination": "https://go.tomr.me/refcodes"
         },
         {
-            "source": "/twitterbot(\/*)",
-            "destination": "/projects/twitterbot"
+            "source": "/projects/twitterbot(\/*)",
+            "destination": "/twitterbot"
+        },
+        {
+            "source": "/projects/aog-privacy(\/*)",
+            "destination": "/aog-privacy"
         },
         {
             "source": "/(faq\/tech|faq\/devices|tech|devices)(\/*)",

@@ -24,16 +24,11 @@
 <meta name="twitter:author" content="{{ site.title }}">
 <meta name="twitter:image" content="{{ site.baseurl }}/assets/img/blondtommodrawing.jpg">
 
-<!-- rss for blog pages -->
-{% if page.layout == 'post' or page.permalink contains 'blog' %}
-<link rel="alternate" type="application/rss+xml" href="{{ site.url }}/blog/feed.xml" />
-{% endif %}
-
 <!-- theme colour for accenting -->
 <meta name="theme-color" content="#60A5FA">
 
 <!-- page title -->
-<title>{% if page.layout != 'home' %}{{ page.title }} &mdash; {% endif %}{{ site.title }}</title>
+<title>{% if page.layout != 'home' %}{{ page.title }} &mdash; {% endif %}{{ site.title }}{% if site.environment != 'production' %} (NOT PROD){% endif %}</title>
 
 <!-- favicon -->
 <link rel="shortcut icon" href="{{ site.baseurl }}/assets/img/twemoji-peace-square.png" type="image/png">

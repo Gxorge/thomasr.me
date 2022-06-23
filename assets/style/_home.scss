@@ -42,17 +42,11 @@ body.home {
             margin: 1.5em 0;
         }
     }
+}
 
-    p#projects-intro {
-        margin-bottom: 0;
-    }
-
-    ul#projects-list {
-        margin: 0;
-        list-style-type: '— ';
-    }
-
-    p#projects-outro {
-        margin-top: 0;
-    }
+// no longer on the homepage but easier to
+// keep this code here
+ul#projects-list {
+    margin: 0;
+    list-style-type: '— ';
 }

@@ -1,11 +1,11 @@
 ---
 layout: default
-title: Twitter Bot
-description: "What is a @itsmeimabot?"
-permalink: /projects/twitterbot/
+title: "Twitter Bot"
+description: "What is @itsmeimabot?"
+permalink: /twitterbot/
 ---
 
-The [@itsmeimabot](https://twitter.com/itsmeimabot) was a Twitter account that used to post gibberish that it had generated from my previous Tweets. It is no longer operational.
+[@itsmeimabot](https://twitter.com/itsmeimabot) was a Twitter account that used to post gibberish that it had generated from my previous Tweets. It is no longer operational.
 
 
-If you'd like to make your own, it was powered by Google Sheets. Here's [the guide that I used](https://www.zachwhalen.net/posts/how-to-make-a-twitter-bot-with-google-spreadsheets-version-04/) (I think).
+If you'd like to make your own, it was powered by Google Sheets. Here's [the guide that I used](https://www.zachwhalen.net/posts/how-to-make-a-twitter-bot-with-google-spreadsheets-version-04/).

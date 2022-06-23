@@ -6,10 +6,9 @@
             <!-- not on a homepage -->
             <a href="{{ site.baseurl }}/" title="Homepage">{{ site.title }}</a>
 
-            {% if page.layout == 'post' %}
-                <!-- or page.title | downcase contains 'blog' -->
-                <!-- we're a blog post! -->
-                &mdash; <a href="/blog/">blog</a>
+            {% if page.layout == 'thing' %}
+                <!-- we're a thing! -->
+                &mdash; <a href="/things/">a thing</a>
             {% endif %}
         {% else %}
             <!-- we're on a homepage -->
