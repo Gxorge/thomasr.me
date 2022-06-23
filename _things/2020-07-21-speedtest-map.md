@@ -2,6 +2,8 @@
 layout: thing
 title: Speedtest.net CSV Mapper
 description: "Plot Speedtest.net App Speedtests on a Map"
+what: "a map"
+to: "to plot internet speedtests"
 image: profile.jpg
 ---
 

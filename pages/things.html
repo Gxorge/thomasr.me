@@ -5,24 +5,15 @@ description: Various projects I've made or been involved with
 permalink: /things/
 ---
 
+
 <ul id="projects-list">
     <li><a href="https://wiki.TomR.me/lab" target="_blank" rel="nofollow noreferrer">My homelab <span class="emoji-icon" aria-hidden="true">↗</span><span class="sr-only">(external link)</span></a> to experiment and learn,</li>
 
-    <li><a href="/next-trains/">a Google Assistant Action</a> to fetch train departures, </li>
-    
-    <li><a href="{{ site.baseurl }}/speedtest-map/">a map</a> to plot internet speedtests,</li>
-    
-    <li><a href="{{ site.baseurl }}/gogo/">a webapp</a> to shorten URLs,</li>
-    
-    <li><a href="{{ site.baseurl }}/unsub/">a tool</a> to bulk-unsubscribe from subreddits,</li>
-        
-    <li><a href="{{ site.baseurl }}/boris/">a website</a> to track whether PM Boris Johnson has resigned,</li>
-    
-    <li><a href="{{ site.baseurl }}/zrpc/">Discord Rich Presence</a> for the Zevvle mobile network,</li>
-    
-    <li><a href="{{ site.baseurl }}/supercutter/">a script</a> to extract segments from downloaded YouTube videos based on their captions,</li>
-    
-    <li><a href="{{ site.baseurl }}/33/">a site</a> for an indie record label,</li>
-    
-    <li><a href="{{ site.baseurl }}/notion-at/">a Notion page</a> to track my college assignments</li>
+    {% for thing in site.things %}
+        {% if thing.hidden != true %}
+            <li>
+                <a href="{{ thing.url }}">{{ thing.what }}</a> {{ thing.to }}{% if forloop.last == false %},{% endif %}
+            </li>
+        {% endif %}
+    {% endfor %}
 </ul>

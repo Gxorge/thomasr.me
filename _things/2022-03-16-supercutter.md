@@ -1,6 +1,8 @@
 ---
 layout: thing
 title: SuperCutter
+what: "a script"
+to: "to extract segments from downloaded YouTube videos based on their captions"
 ---
 
 [SuperCutter](https://github.com/itsmeimtom/supercutter) is a tool to extract segments from downloaded YouTube videos based on their captions.

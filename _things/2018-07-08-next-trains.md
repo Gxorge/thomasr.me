@@ -2,6 +2,8 @@
 layout: thing
 title: Next Trains
 description: "Google Assistant Action to fetch British railway departures"
+what: "a Google Assistant Action"
+to: "to fetch train departures"
 image: profile.jpg
 ---
 
