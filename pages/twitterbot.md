@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Twitter Bot
+title: "Twitter Bot"
 description: "What is @itsmeimabot?"
 permalink: /twitterbot/
 ---

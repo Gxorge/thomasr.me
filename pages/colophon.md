@@ -1,8 +1,8 @@
 ---
 layout: default
-title: Colophon
+title: "Colophon"
+description: "Info about this site"
 permalink: /colophon/
-description: Info about this site
 ---
 
 # The Site

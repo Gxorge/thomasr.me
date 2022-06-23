@@ -1,7 +1,7 @@
 ---
 layout: default
-title: What I Use
-description: 'Hardware, Software & Services'
+title: "What I Use"
+description: "Hardware, Software & Services"
 permalink: /uses/
 ---
 

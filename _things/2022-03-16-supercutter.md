@@ -1,6 +1,6 @@
 ---
 layout: thing
-title: SuperCutter
+title: "SuperCutter"
 what: "a script"
 to: "to extract segments from downloaded YouTube videos based on their captions"
 ---
