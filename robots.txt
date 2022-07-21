@@ -10,6 +10,6 @@ Sitemap: {{ site.url }}/sitemap.xml # Pages on this site
 Sitemap: https://github-sitemap.thomasr.me/sitemap.xml # GitHub Pages sites
 {% for page in site.pages %}{% if page.hidden %}Disallow: {{ page.url }} # added automatically{% endif %}{% endfor %}
 
-User-agent: ia_archiver
+User-Agent: ia_archiver
 Disallow:
 {% endif %}
