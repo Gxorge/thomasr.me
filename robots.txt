@@ -1,20 +1,15 @@
 ---
 ---
-{% if jekyll.environment != "production" %}
-# this isn't a production site, please go away xoxo
+{% if jekyll.environment != "production" %}# This is not a production site.
 User-Agent: *
 Disallow: /
-
-{% else %}
-# Beep Boop!
+{% else %}# I'll make my own robots.txt file, with blackjack - and hookers!
 
 User-Agent: *
-Sitemap: {{ site.url }}/sitemap.xml
-Sitemap: https://github-sitemap.thomasr.me/sitemap.xml
-
-{% for page in site.pages %}{% if page.hidden %}
-Disallow: {{ page.url }}{% endif %}{% endfor %} # added automatically
-{% endif %}
+Sitemap: {{ site.url }}/sitemap.xml # Pages on this site
+Sitemap: https://github-sitemap.thomasr.me/sitemap.xml # GitHub Pages sites
+{% for page in site.pages %}{% if page.hidden %}Disallow: {{ page.url }} # added automatically{% endif %}{% endfor %}
 
 User-agent: ia_archiver
 Disallow:
+{% endif %}
