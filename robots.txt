@@ -16,3 +16,5 @@ Sitemap: https://github-sitemap.thomasr.me/sitemap.xml
 Disallow: {{ page.url }}{% endif %}{% endfor %} # added automatically
 {% endif %}
 
+User-agent: ia_archiver
+Disallow:
