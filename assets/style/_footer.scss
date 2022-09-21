@@ -17,6 +17,7 @@ footer#site-footer {
     opacity: 0.8;
     transition: opacity 0.2s ease-out;
     cursor: default;
+
     &:hover {
         opacity: 1;
     }
@@ -27,6 +28,7 @@ footer#site-footer {
     }
 
     text-transform: lowercase;
+
     @include on-small-screen {
         text-align: center;
         opacity: 1;
@@ -34,7 +36,7 @@ footer#site-footer {
 
     a {
         font-weight: normal;
-    
+
         @include on-small-screen {
             display: block;
             width: 100%;
@@ -42,7 +44,7 @@ footer#site-footer {
             margin: 8px 0;
             font-size: 1.2em;
         }
-        
+
         @include on-big-screen {
             &:not(:last-of-type)::after {
                 content: ' —';
