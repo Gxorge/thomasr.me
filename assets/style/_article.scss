@@ -1,9 +1,10 @@
-body.post, body.thing {
+body.post,
+body.thing {
     header#page-header {
         padding: 0;
         text-align: left;
         margin-bottom: 2em;
-    
+
         h1#page-title::before {
 
             @include on-small-screen {
@@ -13,7 +14,7 @@ body.post, body.thing {
             border-radius: 8px 8px 0 0;
             -webkit-mask-image: linear-gradient(to bottom, #000 0%, transparent 80%);
             mask-image: linear-gradient(to bottom, #000 0%, transparent 80%);
-    
+
             @include on-big-screen {
                 transform: scale(1.1);
             }
@@ -23,7 +24,7 @@ body.post, body.thing {
             background-size: cover;
             filter: saturate(1.2) contrast(1.2);
             content: "";
-            
+
             z-index: -1;
         }
     }
@@ -39,6 +40,7 @@ body.post, body.thing {
 
                 &:hover img {
                     border-color: $accent;
+
                     @include on-big-screen {
                         transform: scale(1.1);
                         box-shadow: 0px 8px 16px 2px #222f;
@@ -51,11 +53,15 @@ body.post, body.thing {
                 border-radius: 4px;
                 box-shadow: 0 4px 0 0 #0000;
                 border: 2px solid $accentLight;
+
                 @include in-light-mode {
                     border-color: $accentDark;
                 }
+
                 transform: scale(1.0);
-                transition: transform 0.2s ease-out, box-shadow 0.2s ease-out, border-color 0.2s ease-out;
+                transition: transform 0.2s ease-out,
+                box-shadow 0.2s ease-out,
+                border-color 0.2s ease-out;
             }
         }
 

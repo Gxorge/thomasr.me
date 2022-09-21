@@ -14,6 +14,10 @@
             "destination": "https://www.flickr.com/photos/193606210@N05"
         },
         {
+            "source": "/(flickr|photography|photos|photog)/(map|photosets|photos)(\/*)",
+            "destination": "https://github-pages.thomasr.me/flickr-toys/"
+        },
+        {
             "source": "/flickr/map/stations(\/*)",
             "destination": "https://www.google.com/maps/d/edit?mid=109JV5Hsk6s-7Ll2twfa6uasCHX2WMJM1&usp=sharing"
         },
