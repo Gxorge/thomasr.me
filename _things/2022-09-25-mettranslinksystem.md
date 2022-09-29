@@ -12,5 +12,4 @@ If granted permission, it uses the IPInfo API to fetch your current location and
 ---
 
 ## Addendum
-Perhaps my favourite example is [METRO Transit](https://www.metrotransit.org/), covering the "Twin Cities" of Minneapolis and Saint Paul in Minnesota. [Their logo](https://commons.wikimedia.org/wiki/File:Metro_Transit_logo.svg) is simply a beauty. The combined sans and serif is an interesting choice and the colour scheme is tragically generic. It gets better though; METRO Transit is a brand of the&hellip; [Metropolitan Council](https://metrocouncil.org/). If there was an award for "area with names more suited to a generic open-world video game," it would certainly be awarded to this bunch.
-
+Perhaps my favourite example is [METRO Transit](https://www.metrotransit.org/), covering the "Twin Cities" of Minneapolis and Saint Paul in Minnesota. [Their logo](https://commons.wikimedia.org/wiki/File:Metro_Transit_logo.svg) is simply a beauty. The combined sans and serif is an interesting choice, and the colour scheme is tragically generic. It gets better though; METRO Transit is a brand of the&hellip; [Metropolitan Council](https://metrocouncil.org/). If there was an award for "area with names more suited to a generic open-world video game," it would certainly be awarded to this bunch.
