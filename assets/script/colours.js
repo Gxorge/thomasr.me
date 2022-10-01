@@ -1,4 +1,5 @@
 if(localStorage.getItem('colours') !== 'off') {
+    document.getElementById('enable-colours-button').style.display = 'none';
     pickColour();
 
     // Rainbow Colour Bar (Pride Month)
@@ -49,16 +50,16 @@ function pickColour(hue) {
 
 function disableColours(noreload) {
     localStorage.setItem('colours', 'off');
-    document.getElementById('disable-colours-button').href = 'javascript:enableColours(true)';
-    document.getElementById('disable-colours-button').innerHTML = '<i aria-hidden="true">🎨</i> Enable Colours';
+    document.getElementById('disable-colours-button').style.display = 'none';
+    document.getElementById('enable-colours-button').style.display = 'inline';
     document.getElementById('new-colour-button').style.display = 'none';
     if(!noreload) window.location.reload();
 }
 
 function enableColours(noreload) {
     localStorage.setItem('colours', 'on');
-    document.getElementById('disable-colours-button').href = 'javascript:disableColours()';
-    document.getElementById('disable-colours-button').innerHTML = '<i aria-hidden="true">🎨</i> Disable Colours';
+    document.getElementById('disable-colours-button').style.display = 'inline';
+    document.getElementById('enable-colours-button').style.display = 'none';
     document.getElementById('new-colour-button').style.display = 'inline';
     
     if(noreload) pickColour();
