@@ -49,17 +49,17 @@ function pickColour(hue) {
 
 function disableColours(noreload) {
     localStorage.setItem('colours', 'off');
-    document.getElementById('bw-button').href = 'javascript:enableColours(true)';
-    document.getElementById('bw-button').innerHTML = '<i aria-hidden="true">🎨</i> Enable Colours';
-    document.getElementById('col-button').style.display = 'none';
+    document.getElementById('disable-colours-button').href = 'javascript:enableColours(true)';
+    document.getElementById('disable-colours-button').innerHTML = '<i aria-hidden="true">🎨</i> Enable Colours';
+    document.getElementById('new-colour-button').style.display = 'none';
     if(!noreload) window.location.reload();
 }
 
 function enableColours(noreload) {
     localStorage.setItem('colours', 'on');
-    document.getElementById('bw-button').href = 'javascript:disableColours()';
-    document.getElementById('bw-button').innerHTML = '<i aria-hidden="true">🎨</i> Disable Colours';
-    document.getElementById('col-button').style.display = 'inline';
+    document.getElementById('disable-colours-button').href = 'javascript:disableColours()';
+    document.getElementById('disable-colours-button').innerHTML = '<i aria-hidden="true">🎨</i> Disable Colours';
+    document.getElementById('new-colour-button').style.display = 'inline';
     
     if(noreload) pickColour();
     if(!noreload) window.location.reload();
