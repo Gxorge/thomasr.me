@@ -1,7 +1,15 @@
+{% if page.lang == 'cy' %}
+    {% assign newCol = "Lliw Newydd" %}
+    {% assign disableCol = "Dim Lliwiau" %}
+{% else %}
+    {% assign newCol = "New Colour" %}
+    {% assign disableCol = "Disable Colours" %}
+{% endif %}
+
 <footer id="site-footer" class="smol">
     <p>
-        <a href="javascript:pickColour()" id="col-button" class="js-only"><span aria-hidden="true">✨</span> New Colour</a>
-        <a href="javascript:disableColours()" id="bw-button" class="js-only"><span  aria-hidden="true">🎨</span> Disable Colours</a>
+        <a href="javascript:pickColour()" id="col-button" class="js-only"><span aria-hidden="true">✨</span> {{ newCol }}</a>
+        <a href="javascript:disableColours()" id="bw-button" class="js-only"><span  aria-hidden="true">🎨</span> {{ disableCol }}</a>
         <!-- <a href="https://github.com/itsmeimtom/thomasr.me/blob/master/{{ page.path }}"><span aria-hidden="true">⌨️</span> Page Source</a> -->
         <!-- <a href="https://github.com/itsmeimtom/thomasr.me/blob/master/LICENSE" title="CC BY-SA License"><span aria-hidden="true">📜</span> Some Rights Reserved</a> -->
     </p>
