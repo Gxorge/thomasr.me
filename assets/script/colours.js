@@ -1,9 +1,10 @@
 if(localStorage.getItem('colours') !== 'off') {
+    document.getElementById('enable-colours-button').classList.add('hidden');
     pickColour();
 
     // Rainbow Colour Bar (Pride Month)
     let now = new Date();
-     if(now.getMonth() == 8 || now.getMonth() == 9) { // if Aug or Sep
+     if([7, 8].includes(now.getMonth())) { // if Aug or Sep
         document.getElementById('colour-bar').classList.add('pride');
         document.getElementById('colour-bar').setAttribute('title', 'Happy Pride! <3');
     }
@@ -49,17 +50,17 @@ function pickColour(hue) {
 
 function disableColours(noreload) {
     localStorage.setItem('colours', 'off');
-    document.getElementById('bw-button').href = 'javascript:enableColours(true)';
-    document.getElementById('bw-button').innerHTML = '<i aria-hidden="true">🎨</i> Enable Colours';
-    document.getElementById('col-button').style.display = 'none';
+    document.getElementById('disable-colours-button').classList.add('hidden');
+    document.getElementById('enable-colours-button').classList.remove('hidden');
+    document.getElementById('new-colour-button').classList.add('hidden');
     if(!noreload) window.location.reload();
 }
 
 function enableColours(noreload) {
     localStorage.setItem('colours', 'on');
-    document.getElementById('bw-button').href = 'javascript:disableColours()';
-    document.getElementById('bw-button').innerHTML = '<i aria-hidden="true">🎨</i> Disable Colours';
-    document.getElementById('col-button').style.display = 'inline';
+    document.getElementById('disable-colours-button').classList.remove('hidden');
+    document.getElementById('enable-colours-button').classList.add('hidden');
+    document.getElementById('new-colour-button').classList.remove('hidden');
     
     if(noreload) pickColour();
     if(!noreload) window.location.reload();

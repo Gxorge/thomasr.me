@@ -46,8 +46,14 @@ footer#site-footer {
         }
 
         @include on-big-screen {
-            &:not(:last-of-type)::after {
-                content: ' —';
+            &.hidden{
+                display: none;
+            }
+
+            &:not(.hidden) + :not(.hidden) {
+                &::before {
+                    content: '— ';
+                }
             }
         }
     }
