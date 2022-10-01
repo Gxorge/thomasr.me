@@ -4,7 +4,7 @@ if(localStorage.getItem('colours') !== 'off') {
 
     // Rainbow Colour Bar (Pride Month)
     let now = new Date();
-     if(now.getMonth() == 8 || now.getMonth() == 9) { // if Aug or Sep
+     if([7, 8].includes(now.getMonth())) { // if Aug or Sep
         document.getElementById('colour-bar').classList.add('pride');
         document.getElementById('colour-bar').setAttribute('title', 'Happy Pride! <3');
     }
