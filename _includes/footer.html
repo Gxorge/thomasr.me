@@ -57,12 +57,14 @@
     document.getElementById('js-greeting').innerText = greeting;
 </script>
 
-<!-- email obfuscation -->
-<script>
-    const email = atob('bWVAVG9tUi5tZQ==');
-    document.getElementById('js-email-text').innerHTML = email;
-    document.getElementById('js-email').href = `mailto:${email}`;
-</script>
+    {% if page.permalink == '/' %}
+    <!-- email obfuscation -->
+    <script>
+        const email = atob('bWVAVG9tUi5tZQ==');
+        document.getElementById('js-email-text').innerHTML = email;
+        document.getElementById('js-email').href = `mailto:${email}`;
+    </script>
+    {% endif %}
 {% endif %}
 
 {% if page.layout == 'thing' and page.image %}
