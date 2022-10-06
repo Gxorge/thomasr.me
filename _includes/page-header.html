@@ -23,7 +23,7 @@
         {% if page.ongoing %}
             <h2 id="page-date" class="smol accent-colour weight-400">ongoing since {{ page.date | date: '%Y' }}</h2>
         {% else %}
-            <h2 id="page-date" class="smol accent-colour weight-400">created {{ page.date | date_to_long_string: 'ordinal'}}</h2>
+            <h2 id="page-date" class="smol accent-colour weight-400">{{ page.date | date: '%b %Y' }}</h2>
         {% endif %}
     {% endif %}
 

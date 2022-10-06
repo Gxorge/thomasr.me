@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Things"
+title: "Things!!"
 description: "Various projects I've made or been involved with"
 permalink: /things/
 ---
@@ -9,7 +9,8 @@ permalink: /things/
 <ul id="projects-list">
     <!-- <li><a href="https://wiki.TomR.me/lab" target="_blank" rel="nofollow noreferrer">My homelab <span class="emoji-icon" aria-hidden="true">↗</span><span class="sr-only">(external link)</span></a> to experiment and learn,</li> -->
 
-    {% for thing in site.things %}
+    {% assign thingsSortedByDate  = site.things | sort: 'date', 'first' | reverse %}
+    {% for thing in thingsSortedByDate %}
         {% if thing.hidden != true %}
             <li>
                 <a href="{{ thing.url }}">{{ thing.what }}</a> {{ thing.to }}{% if forloop.last == false %},{% endif %}
@@ -17,3 +18,5 @@ permalink: /things/
         {% endif %}
     {% endfor %}
 </ul>
+
+<p class="smol" style="text-align: right; font-style: italic;">sorted by newest to oldest!</p>
