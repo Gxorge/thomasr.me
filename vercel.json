@@ -1,100 +1,101 @@
 {
-    "public": true,
-    
-    "trailingSlash": true,
-    "cleanUrls": true,
-
-    "redirects": [
+  "public": true,
+  "trailingSlash": true,
+  "cleanUrls": true,
+  "redirects": [
+    {
+      "source": "/(faq|contact|who|now|about|projects)(/*)",
+      "destination": "/"
+    },
+    {
+      "source": "/(flickr|photography|photos|photog)(/*)",
+      "destination": "https://www.flickr.com/photos/193606210@N05"
+    },
+    {
+      "source": "/(flickr|photography|photos|photog)/(map|photosets|photos)(/*)",
+      "destination": "https://github-pages.thomasr.me/flickr-toys/"
+    },
+    {
+      "source": "/flickr/map/stations(/*)",
+      "destination": "https://www.google.com/maps/d/edit?mid=109JV5Hsk6s-7Ll2twfa6uasCHX2WMJM1&usp=sharing"
+    },
+    {
+      "source": "/humans:slug*",
+      "destination": "https://github.com/itsmeimtom/thomasr.me/graphs/contributors"
+    },
+    {
+      "source": "/ref-codes(/*)",
+      "destination": "https://go.tomr.me/refcodes"
+    },
+    {
+      "source": "/(cv|resume)(/*)",
+      "destination": "https://cv.thomasr.me"
+    },
+    {
+      "source": "/hello-from/misconfigured(/*)",
+      "destination": "https://tomr.network/misconfig?from=oldmisconfiguredlanding"
+    },
+    {
+      "source": "/projects/twitterbot(/*)",
+      "destination": "/twitterbot"
+    },
+    {
+      "source": "/projects/aog-privacy(/*)",
+      "destination": "/aog-privacy"
+    },
+    {
+      "source": "/(faq/tech|faq/devices|tech|devices)(/*)",
+      "destination": "/uses"
+    },
+    {
+      "source": "/homelab(/*)",
+      "destination": "/lab"
+    }
+  ],
+  "rewrites": [],
+  "headers": [
+    {
+      "source": "/:path*",
+      "headers": [
         {
-            "source": "/(faq|contact|who|now|about|projects)(\/*)",
-            "destination": "/"
+          "key": "Strict-Transport-Security",
+          "value": "max-age=63072000; includeSubDomains; preload"
         },
         {
-            "source": "/(flickr|photography|photos|photog)(\/*)",
-            "destination": "https://www.flickr.com/photos/193606210@N05"
+          "key": "X-Powered-By",
+          "value": "hugs"
         },
         {
-            "source": "/(flickr|photography|photos|photog)/(map|photosets|photos)(\/*)",
-            "destination": "https://github-pages.thomasr.me/flickr-toys/"
-        },
-        {
-            "source": "/flickr/map/stations(\/*)",
-            "destination": "https://www.google.com/maps/d/edit?mid=109JV5Hsk6s-7Ll2twfa6uasCHX2WMJM1&usp=sharing"
-        },
-        {
-            "source": "/humans:slug*",
-            "destination": "https://github.com/itsmeimtom/thomasr.me/graphs/contributors"
-        },
-        {
-            "source": "/ref-codes(\/*)",
-            "destination": "https://go.tomr.me/refcodes"
-        },
-        {
-            "source": "/projects/twitterbot(\/*)",
-            "destination": "/twitterbot"
-        },
-        {
-            "source": "/projects/aog-privacy(\/*)",
-            "destination": "/aog-privacy"
-        },
-        {
-            "source": "/(faq\/tech|faq\/devices|tech|devices)(\/*)",
-            "destination": "/uses"
-        },
-        {
-            "source": "/(cv|resume)(\/*)",
-            "destination": "https://cv.thomasr.me"
-        },
-        {
-            "source":"/hello-from/misconfigured(\/*)",
-            "destination": "https://tomr.network/misconfig?from=oldmisconfiguredlanding"
+          "key": "Content-Security-Policy",
+          "value": "default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; font-src 'self'; connect-src 'self' https://github-pages.thomasr.me; img-src 'self' data:; frame-src 'self';"
         }
-    ],
-    
-    "rewrites": [],
-
-    "headers": [{
-            "source": "/:path*",
-            "headers": [
-                {
-                    "key": "Strict-Transport-Security",
-                    "value": "max-age=63072000; includeSubDomains; preload"
-                },
-                {
-                    "key": "X-Powered-By",
-                    "value": "hugs"
-                },
-                {
-                    "key": "Content-Security-Policy",
-                    "value": "default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; font-src 'self'; connect-src 'self' https://github-pages.thomasr.me; img-src 'self' data:; frame-src 'self';" 
-                }
-            ]
+      ]
+    },
+    {
+      "source": "/",
+      "headers": [
+        {
+          "key": "Strict-Transport-Security",
+          "value": "max-age=63072000; includeSubDomains; preload"
         },
         {
-            "source": "/",
-            "headers": [
-                {
-                    "key": "Strict-Transport-Security",
-                    "value": "max-age=63072000; includeSubDomains; preload"
-                },
-                {
-                    "key": "X-Powered-By",
-                    "value": "hugs"
-                },
-                {
-                    "key": "Content-Security-Policy",
-                    "value": "default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; font-src 'self'; connect-src 'self' https://github-pages.thomasr.me; img-src 'self' data:; frame-src 'self';" 
-                }
-            ]
+          "key": "X-Powered-By",
+          "value": "hugs"
         },
         {
-            "source": "/blog/feed.xml",
-            "headers": [
-                {
-                    "key": "Content-Type",
-                    "value": "application/rss+xml"
-                }
-            ]
+          "key": "Content-Security-Policy",
+          "value": "default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; font-src 'self'; connect-src 'self' https://github-pages.thomasr.me; img-src 'self' data:; frame-src 'self';"
         }
-    ]
+      ]
+    },
+    {
+      "source": "/blog/feed.xml",
+      "headers": [
+        {
+          "key": "Content-Type",
+          "value": "application/rss+xml"
+        }
+      ]
+    }
+  ]
 }
