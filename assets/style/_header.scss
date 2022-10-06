@@ -61,6 +61,10 @@ header#site-header {
         &:hover {
             text-decoration: underline;
         }
+
+        &:focus:hover {
+            color: $accent;
+        }
     }
 }
 
