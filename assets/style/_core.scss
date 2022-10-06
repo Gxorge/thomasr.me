@@ -75,13 +75,13 @@ a {
            }
         }
 
-        &:focus {
-            background-color: $accentLight;
+        &:focus, &:focus:hover {
             color: $accentDark;
+            background-color: $accentLight;
 
             @include in-light-mode {
-                background-color: $accentDark;
                 color: $accentLight;
+                background-color: $accentDark;
             }
         }
     }
