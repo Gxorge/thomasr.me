@@ -8,7 +8,7 @@ permalink: /things/
 
 <ul id="projects-list">    
     <!-- ongoing projects -->
-    {% assign ongoingThings = site.things | where: 'ongoing', true | sort: 'date', 'first' | reverse %}
+    {% assign ongoingThings = site.things | where: 'ongoing', true | sort: 'since', 'first' | reverse %}
     {% for thing in ongoingThings %}
         {% if thing.hidden != true %}
             <li>
