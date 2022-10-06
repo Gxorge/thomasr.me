@@ -46,7 +46,11 @@ a {
     
     &[href] {
         text-decoration: none;
-        border-bottom: 2px solid $accent;
+
+        &:not(.butt):not(.no-underline) {
+            border-bottom: 2px solid $accent;
+        }
+
         font-weight: bold;
 
         i.fa-external-link-alt {
@@ -54,13 +58,21 @@ a {
             vertical-align: super;
         }
 
-        &:hover {
+        &:not(.butt):not(.no-underline):hover {
             text-decoration: none;
-            border-bottom: 2px solid $accentLightIsh;
+            border-bottom-color: $accentLightIsh;
 
             @include in-light-mode {
                 border-bottom-color: $accentDarkIsh;
             }
+        }
+
+        &.no-underline:hover {
+           color: $accentLight; 
+
+           @include in-light-mode {
+                color: $accent;
+           }
         }
 
         &:focus {
