@@ -16,7 +16,7 @@ Inspired by [uses.tech](https://uses.tech/) (and especially [Tai's page](https:/
 - I **procrastinate** with an [iPhone 12 mini](https://www.apple.com/uk/iphone-12/)
 - I **tell the time** with a [Apple Watch](https://www.apple.com/uk/watch) Series 4
 - I **listen** with [Sennheiser HD 58X Jubilee](https://drop.com/buy/massdrop-x-sennheiser-hd-58x-jubilee-headphones) headphones and the obligatory [Airpods Pros](https://www.apple.com/uk/airpods/)
-- I **babysit** a [homelab](https://wiki.tomr.me/lab)
+- I **babysit** a [homelab]({{ site.baseurl }}/lab)
 
 ## Software
 - I **complain about** Windows 10 Pro
