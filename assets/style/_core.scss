@@ -24,7 +24,7 @@ body {
 main {
     max-width: $width;
     margin: 0 auto;
-    line-height: 1.5em;
+    line-height: 1.7em;
 }
 
 h1,
@@ -37,11 +37,20 @@ h4 {
 
 
 a {
-    color: $accent;
+    color: $accentLightIsh;
 
+    @include in-light-mode {
+        color: $accentDarkIsh;
+    }
+
+    
     &[href] {
-        // text-decoration: underline;
         text-decoration: none;
+
+        &:not(.butt):not(.no-underline) {
+            border-bottom: 2px solid $accent;
+        }
+
         font-weight: bold;
 
         i.fa-external-link-alt {
@@ -49,18 +58,30 @@ a {
             vertical-align: super;
         }
 
-        &:hover {
-            // text-decoration: none;
-            text-decoration: underline;
-        }
-
-        &:focus {
-            background-color: $accentLight;
-            color: $accentDark;
+        &:not(.butt):not(.no-underline):hover {
+            text-decoration: none;
+            border-bottom-color: $accentLightIsh;
 
             @include in-light-mode {
-                background-color: $accentDark;
+                border-bottom-color: $accentDarkIsh;
+            }
+        }
+
+        &.no-underline:hover {
+           color: $accentLight; 
+
+           @include in-light-mode {
+                color: $accent;
+           }
+        }
+
+        &:focus, &:focus:hover {
+            color: $accentDark;
+            background-color: $accentLight;
+
+            @include in-light-mode {
                 color: $accentLight;
+                background-color: $accentDark;
             }
         }
     }
