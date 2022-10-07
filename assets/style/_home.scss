@@ -50,4 +50,8 @@ body.home {
 ul#projects-list {
     margin: 0;
     list-style-type: '— ';
+
+    li {
+        margin: 0.75em;
+    }
 }

@@ -29,7 +29,7 @@ function setColour(hue) {
         setCssAccent('Light', hslToHex(hue, 35, 95));
     }
 
-    setCssAccent('', hslToHex(hue, 40, 50));
+    setCssAccent('', hslToHex(hue, 50, 50));
 }
 
 function pickColour(hue) {

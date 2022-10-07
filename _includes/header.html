@@ -4,7 +4,7 @@
     <h1>
         {% if page.layout != 'home' %}
             <!-- not on a homepage -->
-            <a href="{{ site.baseurl }}/" title="Homepage">{{ site.title }}</a>
+            <a href="{{ site.baseurl }}/" title="Homepage" class="no-underline">{{ site.title }}</a>
 
             {% if page.layout == 'thing' %}
                 <!-- we're a thing! -->
@@ -12,7 +12,7 @@
             {% endif %}
         {% else %}
             <!-- we're on a homepage -->
-            <a href="{{ site.baseurl }}/" title="Homepage">
+            <a href="{{ site.baseurl }}/" title="Homepage" class="no-underline">
             <i class="baskerville-italic"><span class="weight-400" id="js-greeting">
                 {% if page.lang != 'cy' %}Hello{% else %}Helo{% endif %},
             </span></i> <span class="weight-700">{% if page.lang != 'cy' %}I'm&nbsp;{% endif %}Tom{% if page.lang == 'cy' %}&nbsp;Dw&nbsp;i{% endif %}!</span></span></a><!--
