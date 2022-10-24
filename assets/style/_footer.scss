@@ -45,11 +45,11 @@ footer#site-footer {
             font-size: 1.2em;
         }
 
-        @include on-big-screen {
-            &.hidden{
-                display: none;
-            }
+        &.hidden{
+            display: none;
+        }
 
+        @include on-big-screen {
             &:not(.hidden) + :not(.hidden) {
                 &::before {
                     content: '— ';
