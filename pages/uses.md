@@ -10,7 +10,7 @@ Inspired by [uses.tech](https://uses.tech/) (and especially [Tai's page](https:/
 ---
 
 ## Hardware
-- I **compute** with a [a custom computer](https://imtom.notion.site/5037d6c38aec4d018d4e52e768d0d834) and a [ThinkPad X280](/2020/thinkpad/)
+- I **compute** with a [a custom computer](https://imtom.notion.site/5037d6c38aec4d018d4e52e768d0d834) and a ThinkPad X280.
 - I **click** with an [MX Master 3](https://www.logitech.com/en-gb/products/mice/mx-master-3.html)
 - I **type** on a [DASkeyboard Prime 13](https://www.daskeyboard.com/p/prime13-mechanical-keyboard/) with MX Browns
 - I **procrastinate** with an [iPhone 12 mini](https://www.apple.com/uk/iphone-12/)
@@ -32,7 +32,7 @@ Inspired by [uses.tech](https://uses.tech/) (and especially [Tai's page](https:/
 - I **domain** with [Porkbun](https://porkbun.com/)
 - I **push to** [GitHub](https://github.com/itsmeimtom) and [hosted 
 GitLab](https://git.tomr.me)
-- I **stay organised** with [Notion](https://notion.so/imtom) (see [my wiki](https://wiki.tomr.me)!)
+- I **stay organised** with [Notion](https://imtom.notion.site) (see [my wiki](https://wiki.tomr.me)!)
 - I **store documents** in Google Drive
 - I **store photos** in iCloud Photos
 
