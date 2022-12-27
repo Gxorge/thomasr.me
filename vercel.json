@@ -50,6 +50,10 @@
     {
       "source": "/homelab(/*)",
       "destination": "/lab"
+    },
+    {
+      "source": "/(notion-at)(/*)",
+      "destination": "/solihull#using-notion-to-stay-organised"
     }
   ],
   "rewrites": [],

@@ -27,7 +27,7 @@
         {% assign bigImageLink = bigImageLink | prepend: thingImageFolder %}
     {% endif %}
 
-    <a href="{{ bigImageLink }}" target="_blank" rel="noopener noreferrer">
+    <a href="{{ bigImageLink }}" target="_blank" rel="noopener noreferrer" class="no-underline">
         <img src="{{ site.baseurl }}{{ imageSrc }}" alt="{{ include.alt }}">
     </a>
 
