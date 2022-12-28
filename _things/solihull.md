@@ -11,12 +11,7 @@ image: drone-min.jpg
 From assignments and notes to development work and small scripts and projects, I have publicised a variety of content [on GitHub](https://github.com/tomatsolihull).
 
 
-<!-- im so sorry, future tom x -->
-<hr style="margin: 3em 0;">
-<style>
-	article h2 { margin-top: 2em; }
-	article h3 { margin-top: 1em; }
-</style>
+---
 
 <!-- 
 TODO: 

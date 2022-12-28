@@ -30,6 +30,10 @@ body.thing {
     }
 
     article {
+        h2 { margin-top: 2em; }
+        h3 { margin-top: 1em; }
+        hr { margin: 3em 0; }
+
         figure.image {
             margin: 2em 0;
             padding: 0;
