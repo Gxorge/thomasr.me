@@ -52,8 +52,8 @@
       "destination": "/lab"
     },
     {
-      "source": "/(notion-at)(/*)",
-      "destination": "/solihull#using-notion-to-stay-organised"
+      "source": "/(notion-at|solcol)(/*)",
+      "destination": "/solihull"
     }
   ],
   "rewrites": [],
