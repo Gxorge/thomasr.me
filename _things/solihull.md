@@ -5,7 +5,7 @@ what: "College Work"
 to: "from my time studying IT at Solihull College"
 ongoing: true
 since: 2021-09-01
-image: drone.png
+image: drone-min.jpg
 ---
 
 From assignments and notes to development work and small scripts and projects, I have publicised a variety of content [on GitHub](https://github.com/tomatsolihull).
@@ -33,7 +33,7 @@ I am writing this page while I am still studying, and it is my intention to keep
 ## Quick Links
 {%
 include image.html 
-src="Notion_1672098060-WDuNqnjEGN.png"
+src="Notion_1672098060-WDuNqnjEGN-min.jpg"
 prependImgFolder="true"
 alt="A screenshot of Notion, showing five links under the heading 'Quick Links.'"
 %}
@@ -42,7 +42,7 @@ The top of the page has a selection of five frequently accessed links. _Outlook 
 ## The Assignment Tracker
 {%
 include image.html 
-src="Notion_1672098729-CPALlxdqMc.png"
+src="Notion_1672098729-CPALlxdqMc-min.jpg"
 prependImgFolder="true"
 alt="A Kanban board with six groups"
 %}
@@ -56,7 +56,7 @@ As is visible in the View title, this Kanban board only shows incomplete assignm
 ### Metadata
 {%
 include image.html
-src="Notion_1672099173-npOMjh18Xy.png"
+src="Notion_1672099173-npOMjh18Xy-min.jpg"
 prependImgFolder="true"
 alt="A screenshot of a page. It has several properties, detailed below."
 %}
@@ -67,7 +67,7 @@ The rest of the properties are more mundane, _Grade_ and _Feedback_ are filled o
 ### Tasks
 {%
 include image.html
-src="Notion_1672099462-qVGKhBljwS.png"
+src="Notion_1672099462-qVGKhBljwS-min.jpg"
 prependImgFolder="true"
 alt="A screenshot of a page"
 %}
@@ -78,7 +78,7 @@ Each task has a large, coloured callout underneath containing the criterion that
 ## Units
 {%
 include image.html
-src="Notion_1672099795-x8JySlHDou.png"
+src="Notion_1672099795-x8JySlHDou-min.jpg"
 prependImgFolder="true"
 alt="A screenshot of a table"
 %}
