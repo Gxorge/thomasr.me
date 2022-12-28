@@ -50,6 +50,10 @@
     {
       "source": "/homelab(/*)",
       "destination": "/lab"
+    },
+    {
+      "source": "/(notion-at|solcol)(/*)",
+      "destination": "/solihull"
     }
   ],
   "rewrites": [],
