@@ -4,7 +4,7 @@
   "cleanUrls": true,
   "redirects": [
     {
-      "source": "/(faq|contact|who|now|about|projects)(/*)",
+      "source": "/(faq|contact|who|now|about)(/*)",
       "destination": "/"
     },
     {
