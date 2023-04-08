@@ -52,8 +52,20 @@
       "destination": "https://github.com/tomatsolihull/notion-assignment-tracker/blob/master/README.md"
     },
     {
-      "source": "/(unsub|gogo|33rpm|speedtest-map|zrpc|boris|supercutter|mettranslinksystem)(/*)",
+      "source": "/(projects|unsub|gogo|33rpm|speedtest-map|zrpc|boris|supercutter|mettranslinksystem)(/*)",
       "destination": "/things"
+    },
+    {
+      "source": "/projects/*",
+      "destination": "/things"
+    },
+    {
+      "source": "/20(\\d*)/(\\w*)(/*)",
+      "destination": "/blog",
+    },
+    {
+      "source": "/blog/*",
+      "destination": "/blog"
     }
   ],
   "rewrites": [],
