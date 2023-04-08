@@ -56,7 +56,7 @@
       "destination": "/things"
     },
     {
-      "source": "/project(s?)/(\\w+)(/*)",
+      "source": "/(project|thing)(s?)/(\\w+)(/*)",
       "destination": "/things"
     },
     {
