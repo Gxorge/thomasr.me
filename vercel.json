@@ -9,7 +9,7 @@
     },
     {
       "source": "/(flickr|photography|photos|photog)(/*)",
-      "destination": "https://www.flickr.com/photos/193606210@N05"
+      "destination": "https://www.flickr.com/people/imtom/"
     },
     {
       "source": "/(flickr|photography|photos|photog)/(map|photosets|photos)(/*)",
@@ -17,23 +17,15 @@
     },
     {
       "source": "/flickr/map/stations(/*)",
-      "destination": "https://www.google.com/maps/d/edit?mid=109JV5Hsk6s-7Ll2twfa6uasCHX2WMJM1&usp=sharing"
+      "destination": "https://www.google.com/maps/d/edit?mid=1I6N53Rx0baiZX8nbl4yVGC9R3YXLGXM"
     },
     {
       "source": "/humans:slug*",
       "destination": "https://github.com/itsmeimtom/thomasr.me/graphs/contributors"
     },
     {
-      "source": "/ref-codes(/*)",
-      "destination": "https://go.tomr.me/refcodes"
-    },
-    {
       "source": "/(cv|resume)(/*)",
       "destination": "https://cv.thomasr.me"
-    },
-    {
-      "source": "/hello-from/misconfigured(/*)",
-      "destination": "https://tomr.network/misconfig?from=oldmisconfiguredlanding"
     },
     {
       "source": "/projects/twitterbot(/*)",
@@ -52,8 +44,12 @@
       "destination": "/lab"
     },
     {
-      "source": "/(notion-at|solcol)(/*)",
-      "destination": "/solihull"
+      "source": "/(notion-at|solihull)(/*)",
+      "destination": "/solcol"
+    },
+    {
+      "source:": "/(unsub|gogo|33rpm|speedtest-map|zrpc|boris|supercutter|mettranslinksystem)(/*)",
+      "destination": "/things"
     }
   ],
   "rewrites": [],

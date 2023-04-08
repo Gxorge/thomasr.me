@@ -1,31 +1,37 @@
 ---
 layout: default
-title: "Things"
-description: "Various projects I've made or been involved with"
+title: "Projects & Things"
+description: "Various things I've made or been involved with"
 permalink: /things/
 ---
 
+<!-- things with no weighting, we sort by name -->
+{% assign noweight = site.data.things | where: 'weight', nil | sort: 'name', 'first' %}
 
-<ul id="projects-list">    
-    <!-- ongoing projects -->
-    {% assign ongoingThings = site.things | where: 'ongoing', true | sort: 'since', 'first' | reverse %}
-    {% for thing in ongoingThings %}
-        {% if thing.hidden != true %}
-            <li>
-                <a href="{{ thing.url }}">{{ thing.what }}</a> {{ thing.to }},
-            </li>
-        {% endif %}
-    {% endfor %}
+<!-- things with a weight (weight > 0) go on top and are sorted by weight -->
+{% assign withweight = site.data.things | where_exp: 'thing', 'thing.weight > 0' | sort: 'weight', 'first' | reverse %}
 
-    <!-- other projects -->
-    {% assign thingsSortedByDate = site.things | where: 'ongoing', nil | sort: 'date', 'first' | reverse %}
-    {% for thing in thingsSortedByDate %}
-        {% if thing.hidden != true %}
-            <li>
-                <a href="{{ thing.url }}">{{ thing.what }}</a> {{ thing.to }}{% if forloop.last == false %},{% endif %}
-            </li>
-        {% endif %}
-    {% endfor %}
+<!-- combine our two sorted collections -->
+{% assign things = withweight | concat: noweight %}
+
+<ul id="projects-list">
+ {% for t in things %}
+
+    <li id="{{ t.name | slugify: 'latin' }}">
+        <h2>
+            <span class="emoji-icon" aria-hidden="true">{{ t.emoji }}</span>
+            <a href="{{ t.link }}">{{ t.name }}
+                {% if t.link contains 'http' %}
+                    <!-- <span class="emoji-icon" aria-hidden="true">↗</span><span class="sr-only">(external link)</span> -->
+                {% endif %}
+            </a>
+            <span class="thing-date">{{ t.date | replace: ' ', '&nbsp;' }}</span>
+        </h2>
+        <!-- markdownify makes its own <p> tags -->
+        {{ t.description | normalize_whitespace | markdownify }}
+    </li>
+
+ {% endfor %}
+
 </ul>
 
-<p class="smol" style="text-align: right; font-style: italic;">sorted by newest to oldest!</p>

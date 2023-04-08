@@ -1,11 +1,7 @@
 ---
 layout: thing
 title: "Homelab"
-ongoing: true
-since: 2016-01-01
-description: "To experiment, learn and use networking & server technologies"
-what: "My homelab"
-to: "to experiment, learn and use networking & server technologies"
+datestr: "Since 2016"
 image: "profile.jpg"
 permalink: "/lab/"
 ---

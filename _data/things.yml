@@ -1,0 +1,75 @@
+- name: College Work
+  description: Work from my time at Solihull College. From assignments and notes to development work and small scripts and projects, I have publicised a variety of content on GitHub.
+  link: /solcol
+  date: Since 2021
+  emoji: 📚
+  weight: 99
+
+- name: Homelab
+  description: To experiment, learn and use networking & server technologies.
+  link: /lab
+  date: Since 2016
+  emoji: 🧪
+  weight: 98
+
+- name: Photography
+  description: I take far too many photos of too many things, mostly trains, infrastructure and landscapes. I share my favourites on Flickr. 
+  link: https://www.flickr.com/people/imtom/
+  date: Since 2003
+  emoji: 📷
+  weight: 97
+
+- name: Advent of Code Solutions
+  description: Solutions to the [Advent of Code](https://adventofcode.com/2022) challenges, primarily written in JavaScript.
+  link: https://github.com/itsmeimtom/advent-of-code
+  date: December 2022
+  emoji: 🎄
+
+- name: Transport Network Name Generator
+  description: Inspired by the uncreative names of many transport networks, this is a site to generate your own unoriginal name.
+  link: https://github.com/itsmeimtom/transport-network-name-generator
+  date: September 2022
+  emoji: 🇲
+
+- name: SuperCutter
+  description: A tool to extract segments from downloaded YouTube videos based on their captions.
+  link: https://github.com/itsmeimtom/supercutter
+  date: March 2022
+  emoji: 🎞️
+
+- name: IsBorisG.one?
+  description: I contributed copy and front-end development to this site, created to track whether former Prime Minister Boris Johnson had resigned.
+  link: https://isborisg.one
+  date: March 2022
+  emoji: 👋
+
+- name: Speedtest.net CSV Mapper
+  description: A tool to plot the results of a speedtest.net CSV file on a map. For [Dan](https://dwilliams.uk/) and [Dav](https://davwheat.dev/).
+  link: https://github-pages.thomasr.me/speedtestdotnetcsvmap/
+  date: July 2020
+  emoji: 🗺️
+
+- name: 33rpm Site
+  description: A prototype site for an [indie record label](https://twitter.com/33rpm_records).
+  link: https://archive.thomasr.me/33rpm/
+  date: April 2020
+  emoji: 💿
+
+- name: BeforeYouGoGo
+  description: Flat-file URL shortener, built to be as simple as possible.
+  link: https://github.com/itsmeimtom/beforeyougogo
+  date: April 2021
+  emoji: 🚀
+
+- name: Unsubscribe from Inactive Subreddits
+  description: A webapp to assist with unsubscribing from inactive subreddits on Reddit.
+  link: https://github.com/itsmeimtom/redditunsubinactive
+  date: October 2018
+  emoji: 📰
+
+- name: Next Trains
+  description: A Google Assistant Action to fetch British railway departures from a station.
+  link: /next-trains
+  date: July 2018 &ndash; June 2023
+  emoji: 🚂
+  weight: 96

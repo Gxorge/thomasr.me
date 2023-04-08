@@ -1,12 +1,9 @@
 ---
 layout: thing
 title: "Next Trains"
-description: "Google Assistant Action to fetch British railway departures"
-what: "a Google Assistant Action"
-to: "to fetch train departures"
+datestr: "2018&nbsp;&ndash;&nbsp;2023"
 image: "profile.jpg"
 ---
-
 
 In 2018 I created a Google Assistant Action to fetch British railway departure boards using the wonderful [RealTimeTrains](https://www.realtimetrains.co.uk/) API.
 
