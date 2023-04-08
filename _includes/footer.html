@@ -41,16 +41,40 @@
     let now = new Date();
     let h = now.getHours();
 
-    let greeting = "{% if page.lang != 'cy' %}Hello{% else %}Helo{% endif %},";
+    {% if page.lang == 'cy' %}
+        {% assign greeting = "Helo" %}
+    {% else %}
+        {% assign greeting = "Hello" %}
+    {% endif %}
 
-    if(h >= 0 && h < 12) greeting = "{% if page.lang != 'cy' %}Good morning{% else %}Bore da{% endif %},"; // 5-12 
+    {% if page.lang == 'cy' %}
+        {% assign morning = "Bore da" %}
+    {% else %}
+        {% assign morning = "Good morning" %}
+    {% endif %}
 
-    if(h >= 12 && h < 18) greeting = "{% if page.lang != 'cy' %}Good afternoon{% else %}Prynhawn da{% endif %},"; // 12-18
+    {% if page.lang == 'cy' %}
+        {% assign afternoon = "Prynhawn da" %}
+    {% else %}
+        {% assign afternoon = "Good afternoon" %}
+    {% endif %}
 
-    if(h >= 18 && h < 22) greeting = "{% if page.lang != 'cy' %}Good evening{% else %}Noswaith dda{% endif %},"; // 18-22
+    {% if page.lang == 'cy' %}
+        {% assign evening = "Noswaith dda" %}
+    {% else %}
+        {% assign evening = "Good evening" %}
+    {% endif %}
+
+    let greeting = "{{ greeting }},";
+
+    if(h >= 0 && h < 12) greeting = "{{ morning }},"; // 5-12 
+
+    if(h >= 12 && h < 18) greeting = "{{ afternoon }},"; // 12-18
+
+    if(h >= 18 && h < 22) greeting = "{{ evening}},"; // 18-22
 
     // if(h >= 22) greeting = "{% if page.lang != 'cy' %}Good night{% else %}Nos da{% endif %},"; // 22-23
-    if(h >= 22) greeting = "{% if page.lang != 'cy' %}Good evening{% else %}Noswaith dda{% endif %},"; // 22-23
+    if(h >= 22) greeting = "{{ evening }},"; // 22-23
     // if(h < 5) greeting = "{% if page.lang != 'cy' %}Good night{% else %}Nos da{% endif %},"; // 0-5
 
 

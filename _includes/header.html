@@ -18,10 +18,10 @@
             </span></i> <span class="weight-700">{% if page.lang != 'cy' %}I'm&nbsp;{% endif %}Tom{% if page.lang == 'cy' %}&nbsp;Dw&nbsp;i{% endif %}!</span></span></a><!--
      -->{% endif %}<!-- comments here to ensure no whitespace after the quote
      -->
-        {% if page.layout == 'home' %}
-        <!-- pronouns only show on the homepages -->
+        {% if page.layout == 'home' and page.lang == en %}
+        <!-- pronouns only show on the english homepage -->
         <span class="smol-quarter accent-colour baseline" ondblclick="rainbowomg()">
-            {% if page.lang != 'cy' %}he/him{% else %}e/fi o/fo{% endif %}
+            he/him
         </span>
         {% endif %}
     </h1>
