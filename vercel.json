@@ -4,7 +4,7 @@
   "cleanUrls": true,
   "redirects": [
     {
-      "source": "/(faq|contact|who|now|about|projects)(/*)",
+      "source": "/(faq|contact|who|now|about)(/*)",
       "destination": "/"
     },
     {
@@ -52,8 +52,20 @@
       "destination": "https://github.com/tomatsolihull/notion-assignment-tracker/blob/master/README.md"
     },
     {
-      "source": "/(unsub|gogo|33rpm|speedtest-map|zrpc|boris|supercutter|mettranslinksystem)(/*)",
+      "source": "/(projects|project|unsub|gogo|33rpm|speedtest-map|zrpc|boris|supercutter|mettranslinksystem)(/*)",
       "destination": "/things"
+    },
+    {
+      "source": "/(project|thing)(s?)/(\\w+)(/*)",
+      "destination": "/things"
+    },
+    {
+      "source": "/(\\d{4})/(.+)",
+      "destination": "/blog"
+    },
+    {
+      "source": "/blog/(.+)",
+      "destination": "/blog"
     }
   ],
   "rewrites": [],
