@@ -61,7 +61,7 @@
     },
     {
       "source": "/20(\\d*)/(\\w*)(/*)",
-      "destination": "/blog",
+      "destination": "/blog"
     },
     {
       "source": "/blog/*",
