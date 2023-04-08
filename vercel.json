@@ -56,15 +56,15 @@
       "destination": "/things"
     },
     {
-      "source": "/projects/(\\w*)(/*)",
+      "source": "/projects/(\\w+)(/*)",
       "destination": "/things"
     },
     {
-      "source": "/20(\\d*)/(\\w*)(/*)",
+      "source": "/20(\\d{2})/(\\w+)(/*)",
       "destination": "/blog"
     },
     {
-      "source": "/blog/(\\w*)(/*)",
+      "source": "/blog/(\\w+)(/*)",
       "destination": "/blog"
     }
   ],
