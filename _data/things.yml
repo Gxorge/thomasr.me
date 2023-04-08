@@ -1,6 +1,6 @@
 - name: College Work
   description: Work from my time at Solihull College. From assignments and notes to development work and small scripts and projects, I have publicised a variety of content on GitHub.
-  link: /solcol
+  link: https://solcol.thomasr.me
   date: Since 2021
   emoji: 📚
   weight: 99

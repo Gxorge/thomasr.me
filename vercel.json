@@ -44,8 +44,12 @@
       "destination": "/lab"
     },
     {
-      "source": "/(notion-at|solihull)(/*)",
-      "destination": "/solcol"
+      "source": "/(solihull|solcol)(/*)",
+      "destination": "https://solcol.thomasr.me"
+    },
+    {
+      "source": "/(notion-at)(/*)",
+      "destination": "https://github.com/tomatsolihull/notion-assignment-tracker/blob/master/README.md"
     },
     {
       "source": "/(unsub|gogo|33rpm|speedtest-map|zrpc|boris|supercutter|mettranslinksystem)(/*)",
