@@ -19,6 +19,13 @@
   emoji: 📷
   weight: 97
 
+- name: Next Trains
+  description: A Google Assistant Action to fetch British railway departures from a station.
+  link: /next-trains
+  date: July 2018 &ndash; June 2023
+  emoji: 🚂
+  weight: 96
+
 - name: Advent of Code Solutions
   description: Solutions to the [Advent of Code](https://adventofcode.com/2022) challenges, primarily written in JavaScript.
   link: https://github.com/itsmeimtom/advent-of-code
@@ -67,9 +74,8 @@
   date: October 2018
   emoji: 📰
 
-- name: Next Trains
-  description: A Google Assistant Action to fetch British railway departures from a station.
-  link: /next-trains
-  date: July 2018 &ndash; June 2023
-  emoji: 🚂
-  weight: 96
+- name: Words
+  description: My future blog/journal, powered by a single file... a README! Are you surprised?
+  link: https://cdn.discordapp.com/attachments/886985391889084497/1094382360495132772/image.png
+  date: November 2022
+  emoji: 📝
