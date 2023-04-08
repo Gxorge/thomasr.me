@@ -1,8 +1,8 @@
 ---
-layout: default
+layout: thing
 title: "Twitter Bot"
+datestr: "2016"
 description: "What is @itsmeimabot?"
-permalink: /twitterbot/
 ---
 
 [@itsmeimabot](https://twitter.com/itsmeimabot) was a Twitter account that used to post gibberish that it had generated from my previous Tweets. It is no longer operational.

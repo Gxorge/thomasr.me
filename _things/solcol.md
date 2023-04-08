@@ -1,15 +1,11 @@
 ---
 layout: thing
 title: "Solihull College Work"
-what: "College Work"
-to: "from my time studying IT at Solihull College"
-ongoing: true
-since: 2021-09-01
+datestr: "Since 2021"
 image: drone-min.jpg
 ---
 
 From assignments and notes to development work and small scripts and projects, I have publicised a variety of content [on GitHub](https://github.com/tomatsolihull).
-
 
 ---
 
